@@ -215,7 +215,7 @@ for {name, value} <- [{"TERMS_URL", terms_url}, {"PRIVACY_URL", privacy_url}],
 end
 
 languages =
-  get_var_from_path_or_env(config_dir, "LANGUAGES", "en,fr,es,it,de")
+  get_var_from_path_or_env(config_dir, "LANGUAGES", "pt_BR,en,fr,es,it,de")
   |> String.split(",")
   |> Enum.map(&String.trim/1)
 
