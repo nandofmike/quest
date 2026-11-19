@@ -314,7 +314,8 @@
                   {"Italiano", "it"},
                   {"日本語", "ja"},
                   {"Latvian", "lv"},
-                  {"Nederlands", "nl"}
+                  {"Nederlands", "nl"},
+                  {"Português (Brasil)", "pt_BR"}
                 ]
                 |> Enum.filter(fn {_name, code} ->
                   code in Application.get_env(:claper, :languages, [
