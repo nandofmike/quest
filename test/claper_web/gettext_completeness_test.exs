@@ -13,7 +13,7 @@ defmodule ClaperWeb.GettextCompletenessTest do
 
   alias Expo.Message.{Plural, Singular}
 
-  @locales ~w(de es fr hu it ja lv nl sv)
+  @locales ~w(de es fr hu it ja lv nl pt_BR sv)
 
   @msgids [
     "%{count} participant",
