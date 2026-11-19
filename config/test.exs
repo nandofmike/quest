@@ -1,5 +1,9 @@
 import Config
 
+# Existing interface assertions use English. Keep this explicit in tests;
+# production continues to inherit the Brazilian Portuguese default.
+config :claper, ClaperWeb.Gettext, default_locale: "en"
+
 # Configure your database
 #
 # Tests use this dedicated database, not DATABASE_URL from the shell or .env.
