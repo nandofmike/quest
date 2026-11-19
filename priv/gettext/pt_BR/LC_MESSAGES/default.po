@@ -2942,87 +2942,87 @@ msgstr "Para aceitar o convite, entre ou crie uma conta com este e-mail: %{email
 #: lib/claper_web/templates/user_registration/confirm.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "We already sent you an email to log in, please retry in 5 minutes."
-msgstr ""
+msgstr "Já enviamos um e-mail para você entrar. Tente novamente em 5 minutos."
 
 #: lib/claper_web/controllers/lti/registration_controller.ex
 #: lib/claper_web/templates/lti/registration/new.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "You must log in to continue"
-msgstr ""
+msgstr "Você precisa entrar para continuar"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #: lib/claper_web/live/form_live/form_component.html.heex
 #: lib/claper_web/live/poll_live/form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Add"
-msgstr ""
+msgstr "Adicionar"
 
 #: lib/claper_web/live/embed_live/form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Add a link"
-msgstr ""
+msgstr "Adicionar um link"
 
 #: lib/claper_web/live/quiz_live/quiz_component.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Add a question"
-msgstr ""
+msgstr "Adicionar uma pergunta"
 
 #: lib/claper_web/live/quiz_live/quiz_component.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Add an answer"
-msgstr ""
+msgstr "Adicionar uma resposta"
 
 #: lib/claper_web/live/transcription_live/form_component.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Add transcription"
-msgstr ""
+msgstr "Adicionar transcrição"
 
 #: lib/claper_web/live/embed_live/form_component.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Add web content"
-msgstr ""
+msgstr "Adicionar conteúdo web"
 
 #: lib/claper_web/live/poll_live/form_component.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Create a poll"
-msgstr ""
+msgstr "Criar uma enquete"
 
 #: lib/claper_web/live/form_live/form_component.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Create form"
-msgstr ""
+msgstr "Criar formulário"
 
 #: lib/claper_web/live/quiz_live/quiz_component.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Create quiz"
-msgstr ""
+msgstr "Criar questionário"
 
 #: lib/claper_web/live/quiz_live/quiz_component.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Delete answer"
-msgstr ""
+msgstr "Excluir resposta"
 
 #: lib/claper_web/live/quiz_live/quiz_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Enter a title"
-msgstr ""
+msgstr "Digite um título"
 
 #: lib/claper_web/live/quiz_live/quiz_component.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Enter your question"
-msgstr ""
+msgstr "Digite sua pergunta"
 
 #: lib/claper_web/live/embed_live/form_component.html.heex
 #: lib/claper_web/live/form_live/form_component.html.heex
 #: lib/claper_web/live/poll_live/form_component.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Enter your title"
-msgstr ""
+msgstr "Digite seu título"
 
 #: lib/claper_web/live/form_live/form_component.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Form's title"
-msgstr ""
+msgstr "Título do formulário"
 
 #: lib/claper_web/live/embed_live/form_component.html.heex
 #: lib/claper_web/live/form_live/form_component.html.heex
@@ -3032,189 +3032,189 @@ msgstr ""
 #: lib/claper_web/live/word_cloud_live/form_component.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Loading..."
-msgstr ""
+msgstr "Carregando..."
 
 #: lib/claper_web/live/quiz_live/quiz_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Mark as correct answer"
-msgstr ""
+msgstr "Marcar como resposta correta"
 
 #: lib/claper_web/live/poll_live/form_component.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Poll's title"
-msgstr ""
+msgstr "Título da enquete"
 
 #: lib/claper_web/live/quiz_live/quiz_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Question %{number}"
-msgstr ""
+msgstr "Pergunta %{number}"
 
 #: lib/claper_web/live/poll_live/form_component.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Remove choice"
-msgstr ""
+msgstr "Remover opção"
 
 #: lib/claper_web/live/form_live/form_component.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Remove field"
-msgstr ""
+msgstr "Remover campo"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Be the first to ask a question or share a thought."
-msgstr ""
+msgstr "Seja o primeiro a fazer uma pergunta ou compartilhar uma ideia."
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Choose identity"
-msgstr ""
+msgstr "Escolher identificação"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Current presentation slide"
-msgstr ""
+msgstr "Slide atual da apresentação"
 
 #: lib/claper_web/live/event_live/post_component.ex
 #, elixir-autogen, elixir-format
 msgid "Message actions"
-msgstr ""
+msgstr "Ações da mensagem"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "New interaction"
-msgstr ""
+msgstr "Nova interação"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Nickname"
-msgstr ""
+msgstr "Apelido"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Open fullscreen"
-msgstr ""
+msgstr "Abrir em tela cheia"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Post as"
-msgstr ""
+msgstr "Publicar como"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Reconnecting..."
-msgstr ""
+msgstr "Reconectando..."
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Send a live reaction"
-msgstr ""
+msgstr "Enviar reação ao vivo"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Send message"
-msgstr ""
+msgstr "Enviar mensagem"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Set your nickname"
-msgstr ""
+msgstr "Defina seu apelido"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Set your nickname to participate"
-msgstr ""
+msgstr "Defina seu apelido para participar"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "new messages"
-msgstr ""
+msgstr "novas mensagens"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Clap"
-msgstr ""
+msgstr "Aplaudir"
 
 #: lib/claper_web/live/event_live/post_component.ex
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Heart"
-msgstr ""
+msgstr "Coração"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Hundred"
-msgstr ""
+msgstr "Cem"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Nickname must be between 2 and 20 characters"
-msgstr ""
+msgstr "O apelido deve ter entre 2 e 20 caracteres"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Raise hand"
-msgstr ""
+msgstr "Levantar a mão"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Hide presentation"
-msgstr "Hide presentation"
+msgstr "Ocultar apresentação"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Show presentation"
-msgstr "Show presentation"
+msgstr "Mostrar apresentação"
 
 #: lib/claper_web/live/event_live/post_component.ex
 #, elixir-autogen, elixir-format
 msgid "Laugh"
-msgstr ""
+msgstr "Rir"
 
 #: lib/claper_web/live/event_live/post_component.ex
 #, elixir-autogen, elixir-format
 msgid "React to message"
-msgstr ""
+msgstr "Reagir à mensagem"
 
 #: lib/claper_web/live/event_live/post_component.ex
 #, elixir-autogen, elixir-format
 msgid "Thumbs up"
-msgstr ""
+msgstr "Curtir"
 
 #: lib/claper_web/live/event_live/poll_component.ex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Voted"
-msgstr ""
+msgstr "Votou"
 
 #: lib/claper_web/live/event_live/form_component.ex
 #: lib/claper_web/live/event_live/word_cloud_component.ex
 #, elixir-autogen, elixir-format
 msgid "Send"
-msgstr ""
+msgstr "Enviar"
 
 #: lib/claper_web/live/event_live/form_component.ex
 #, elixir-autogen, elixir-format
 msgid "Sent"
-msgstr ""
+msgstr "Enviado"
 
 #: lib/claper_web/live/event_live/manage_attendees_options_component.ex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Attendee Settings"
-msgstr ""
+msgstr "Configurações dos participantes"
 
 #: lib/claper_web/live/event_live/manage_interaction_options_component.ex
 #, elixir-autogen, elixir-format
 msgid "Current Interaction Settings"
-msgstr ""
+msgstr "Configurações da interação atual"
 
 #: lib/claper_web/live/event_live/manage_presentation_options_component.ex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Presentation Settings"
-msgstr ""
+msgstr "Configurações da apresentação"
 
 #: lib/claper_web/live/user_settings_live/show.ex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Change the first and last name associated with your account."
-msgstr ""
+msgstr "Altere o nome e o sobrenome associados à sua conta."
 
 #: lib/claper_web/live/admin_live/user_live.html.heex
 #: lib/claper_web/live/admin_live/user_live/form_component.ex
@@ -3222,7 +3222,7 @@ msgstr ""
 #: lib/claper_web/templates/user_registration/new.html.heex
 #, elixir-autogen, elixir-format
 msgid "First name"
-msgstr ""
+msgstr "Nome"
 
 #: lib/claper_web/live/admin_live/user_live.html.heex
 #: lib/claper_web/live/admin_live/user_live/form_component.ex
@@ -3230,873 +3230,873 @@ msgstr ""
 #: lib/claper_web/templates/user_registration/new.html.heex
 #, elixir-autogen, elixir-format
 msgid "Last name"
-msgstr ""
+msgstr "Sobrenome"
 
 #: lib/claper_web/live/user_settings_live/show.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Not set"
-msgstr ""
+msgstr "Não definido"
 
 #: lib/claper_web/live/user_settings_live/show.ex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Update your profile"
-msgstr ""
+msgstr "Atualizar perfil"
 
 #: lib/claper_web/live/user_settings_live/show.ex
 #, elixir-autogen, elixir-format
 msgid "Your profile has been updated."
-msgstr ""
+msgstr "Seu perfil foi atualizado."
 
 #: lib/claper_web/live/admin_live/user_live/form_component.ex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Enter first name"
-msgstr ""
+msgstr "Digite o nome"
 
 #: lib/claper_web/live/admin_live/user_live/form_component.ex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Enter last name"
-msgstr ""
+msgstr "Digite o sobrenome"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Hide captions"
-msgstr ""
+msgstr "Ocultar legendas"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Show captions"
-msgstr ""
+msgstr "Mostrar legendas"
 
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Waiting for captions"
-msgstr ""
+msgstr "Aguardando legendas"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Add a presentation"
-msgstr ""
+msgstr "Adicionar uma apresentação"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Attached"
-msgstr ""
+msgstr "Anexado"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Attendees enter this code to join."
-msgstr ""
+msgstr "Os participantes digitam este código para entrar."
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Close event editor"
-msgstr ""
+msgstr "Fechar editor de eventos"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #: lib/claper_web/live/event_live/index.ex
 #, elixir-autogen, elixir-format
 msgid "Create event"
-msgstr ""
+msgstr "Criar evento"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Creating..."
-msgstr ""
+msgstr "Criando..."
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Delete this event? This action cannot be undone."
-msgstr ""
+msgstr "Excluir este evento? Essa ação não poderá ser desfeita."
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Drag and drop a file here, or"
-msgstr ""
+msgstr "Arraste um arquivo para cá ou"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Event name"
-msgstr ""
+msgstr "Nome do evento"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Facilitators"
-msgstr ""
+msgstr "Facilitadores"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Invite people who can present and manage audience interactions."
-msgstr ""
+msgstr "Convide pessoas que possam apresentar e gerenciar as interações da plateia."
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Join code"
-msgstr ""
+msgstr "Código de acesso"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "New presentation ready"
-msgstr ""
+msgstr "Nova apresentação pronta"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "No facilitators have been added yet."
-msgstr ""
+msgstr "Nenhum facilitador foi adicionado."
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Optional. Add a PDF or PowerPoint now, or upload one later."
-msgstr ""
+msgstr "Opcional. Adicione um PDF ou PowerPoint agora ou envie depois."
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "PDF, PPT, or PPTX up to %{size} MB"
-msgstr ""
+msgstr "PDF, PPT ou PPTX de até %{size} MB"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Permanently delete this event. This action cannot be undone."
-msgstr ""
+msgstr "Excluir permanentemente este evento. Essa ação não poderá ser desfeita."
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Presentation"
-msgstr ""
+msgstr "Apresentação"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Presentation upload progress"
-msgstr ""
+msgstr "Progresso do envio da apresentação"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Remove facilitator"
-msgstr ""
+msgstr "Remover facilitador"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Remove selected presentation"
-msgstr ""
+msgstr "Remover apresentação selecionada"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Replace presentation"
-msgstr ""
+msgstr "Substituir apresentação"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Save changes"
-msgstr ""
+msgstr "Salvar alterações"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Save the event to start processing this presentation."
-msgstr ""
+msgstr "Salve o evento para iniciar o processamento desta apresentação."
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Set up the details attendees will use to join."
-msgstr ""
+msgstr "Configure as informações que os participantes usarão para entrar."
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Shown in your local time."
-msgstr ""
+msgstr "Exibido no seu horário local."
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Start date and time"
-msgstr ""
+msgstr "Data e hora de início"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "These details help attendees find and join your event."
-msgstr ""
+msgstr "Essas informações ajudam os participantes a encontrar e acessar o evento."
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Update the event details your attendees will see."
-msgstr ""
+msgstr "Atualize as informações do evento exibidas aos participantes."
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Uploading... %{progress}%"
-msgstr ""
+msgstr "Enviando... %{progress}%"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Your presentation is attached and ready to use."
-msgstr ""
+msgstr "Sua apresentação está anexada e pronta para uso."
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "name@example.com"
-msgstr ""
+msgstr "nome@exemplo.com"
 
 #: lib/claper_web/live/event_live/manage.ex
 #, elixir-autogen, elixir-format
 msgid "A reply cannot be empty"
-msgstr ""
+msgstr "A resposta não pode ficar em branco"
 
 #: lib/claper_web/live/event_live/manage.ex
 #: lib/claper_web/live/event_live/show.ex
 #, elixir-autogen, elixir-format
 msgid "Could not send the reply"
-msgstr ""
+msgstr "Não foi possível enviar a resposta"
 
 #: lib/claper_web/live/event_live/manageable_post_component.ex
 #: lib/claper_web/live/event_live/post_component.ex
 #, elixir-autogen, elixir-format
 msgid "Reply"
-msgstr ""
+msgstr "Responder"
 
 #: lib/claper_web/live/event_live/manageable_post_component.ex
 #: lib/claper_web/live/event_live/post_component.ex
 #, elixir-autogen, elixir-format
 msgid "Write a reply..."
-msgstr ""
+msgstr "Escreva uma resposta..."
 
 #: lib/claper_web/live/event_live/manage.ex
 #: lib/claper_web/live/event_live/show.ex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Could not delete reply"
-msgstr ""
+msgstr "Não foi possível excluir a resposta"
 
 #: lib/claper_web/live/event_live/manageable_post_component.ex
 #: lib/claper_web/live/event_live/post_component.ex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Delete reply"
-msgstr ""
+msgstr "Excluir resposta"
 
 #: lib/claper_web/live/event_live/show.ex
 #, elixir-autogen, elixir-format
 msgid "You cannot delete this reply"
-msgstr ""
+msgstr "Você não pode excluir esta resposta"
 
 #: lib/claper_web/live/event_live/show.ex
 #, elixir-autogen, elixir-format
 msgid "You cannot reply to this message"
-msgstr ""
+msgstr "Você não pode responder a esta mensagem"
 
 #: lib/claper_web/live/event_live/presenter.ex
 #, elixir-autogen, elixir-format
 msgid "%{count} reply"
 msgid_plural "%{count} replies"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%{count} resposta"
+msgstr[1] "%{count} respostas"
 
 #: lib/claper_web/templates/user_confirmation/new.html.heex
 #, elixir-autogen, elixir-format
 msgid "Already confirmed?"
-msgstr ""
+msgstr "Já confirmou?"
 
 #: lib/claper_web/templates/user_confirmation/new.html.heex
 #, elixir-autogen, elixir-format
 msgid "Confirm your account"
-msgstr ""
+msgstr "Confirme sua conta"
 
 #: lib/claper_web/templates/user_confirmation/new.html.heex
 #, elixir-autogen, elixir-format
 msgid "Enter your email address and we'll send you a new confirmation link."
-msgstr ""
+msgstr "Informe seu e-mail e enviaremos um novo link de confirmação."
 
 #: lib/claper_web/controllers/user_confirmation_controller.ex
 #, elixir-autogen, elixir-format
 msgid "If your email is in our system and it has not been confirmed yet, you will receive an email with instructions shortly."
-msgstr ""
+msgstr "Se seu e-mail estiver cadastrado e ainda não tiver sido confirmado, você receberá instruções em breve."
 
 #: lib/claper_web/controllers/user_session_controller.ex
 #, elixir-autogen, elixir-format
 msgid "Invalid email or password"
-msgstr ""
+msgstr "E-mail ou senha inválidos"
 
 #: lib/claper_web/controllers/user_confirmation_controller.ex
 #, elixir-autogen, elixir-format
 msgid "Magic link is invalid or has expired."
-msgstr ""
+msgstr "O link de acesso é inválido ou expirou."
 
 #: lib/claper_web/templates/user_confirmation/new.html.heex
 #, elixir-autogen, elixir-format
 msgid "Resend confirmation instructions"
-msgstr ""
+msgstr "Reenviar instruções de confirmação"
 
 #: lib/claper_web/controllers/user_confirmation_controller.ex
 #, elixir-autogen, elixir-format
 msgid "User confirmation link is invalid or it has expired."
-msgstr ""
+msgstr "O link de confirmação do usuário é inválido ou expirou."
 
 #: lib/claper_web/controllers/user_confirmation_controller.ex
 #, elixir-autogen, elixir-format
 msgid "User confirmed successfully."
-msgstr ""
+msgstr "Usuário confirmado com sucesso."
 
 #: lib/claper_web/controllers/user_session_controller.ex
 #, elixir-autogen, elixir-format
 msgid "You need to confirm your account before logging in. Please check your email for confirmation instructions."
-msgstr ""
+msgstr "Você precisa confirmar sua conta antes de entrar. Confira as instruções enviadas por e-mail."
 
 #: lib/claper_web/controllers/user_settings_controller.ex
 #, elixir-autogen, elixir-format
 msgid "Email change link is invalid or it has expired."
-msgstr ""
+msgstr "O link de alteração de e-mail é inválido ou expirou."
 
 #: lib/claper_web/controllers/user_settings_controller.ex
 #, elixir-autogen, elixir-format
 msgid "Email changed successfully."
-msgstr ""
+msgstr "E-mail alterado com sucesso."
 
 #: lib/claper_web/plugs/admin_required_plug.ex
 #, elixir-autogen, elixir-format
 msgid "You must be an admin to access this page."
-msgstr ""
+msgstr "Você precisa ser administrador para acessar esta página."
 
 #: lib/claper_web/controllers/user_auth.ex
 #, elixir-autogen, elixir-format
 msgid "You must log in to access this page."
-msgstr ""
+msgstr "Você precisa entrar para acessar esta página."
 
 #: lib/claper_web/live/stat_live/index.html.heex
 #, elixir-autogen, elixir-format
 msgid "%{count} participant"
 msgid_plural "%{count} participants"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%{count} participante"
+msgstr[1] "%{count} participantes"
 
 #: lib/claper_web/live/word_cloud_live/form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Attendees can see the word cloud on their device"
-msgstr ""
+msgstr "Os participantes podem ver a nuvem de palavras em seus celulares"
 
 #: lib/claper_web/live/word_cloud_live/form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Create word cloud"
-msgstr ""
+msgstr "Criar nuvem de palavras"
 
 #: lib/claper_web/live/event_live/word_cloud_component.ex
 #, elixir-autogen, elixir-format
 msgid "Current word cloud"
-msgstr ""
+msgstr "Nuvem de palavras atual"
 
 #: lib/claper_web/live/event_live/manage.html.heex
 #, elixir-autogen, elixir-format
 msgid "Edit word cloud"
-msgstr ""
+msgstr "Editar nuvem de palavras"
 
 #: lib/claper_web/live/event_live/manage_interaction_options_component.ex
 #, elixir-autogen, elixir-format
 msgid "Hidden words"
-msgstr ""
+msgstr "Palavras ocultas"
 
 #: lib/claper_web/live/event_live/manage_interaction_options_component.ex
 #, elixir-autogen, elixir-format
 msgid "Hide the word cloud from attendees"
-msgstr ""
+msgstr "Ocultar a nuvem de palavras dos participantes"
 
 #: lib/claper_web/live/event_live/manage_interaction_options_component.ex
 #, elixir-autogen, elixir-format
 msgid "Hide this word"
-msgstr ""
+msgstr "Ocultar esta palavra"
 
 #: lib/claper_web/live/event_live/manage.html.heex
 #: lib/claper_web/live/event_live/manage_floating_action_bar.ex
 #: lib/claper_web/live/event_live/manage_interaction_list_component.ex
 #, elixir-autogen, elixir-format
 msgid "Let your audience answer in their own words."
-msgstr ""
+msgstr "Permita que a plateia responda com suas próprias palavras."
 
 #: lib/claper_web/live/event_live/manage.html.heex
 #, elixir-autogen, elixir-format
 msgid "New word cloud"
-msgstr ""
+msgstr "Nova nuvem de palavras"
 
 #: lib/claper_web/live/stat_live/index.html.heex
 #, elixir-autogen, elixir-format
 msgid "No word cloud has been created"
-msgstr ""
+msgstr "Nenhuma nuvem de palavras foi criada"
 
 #: lib/claper_web/live/stat_live/index.html.heex
 #, elixir-autogen, elixir-format
 msgid "No words have been sent"
-msgstr ""
+msgstr "Nenhuma palavra foi enviada"
 
 #: lib/claper_web/live/event_live/manage_interaction_options_component.ex
 #, elixir-autogen, elixir-format
 msgid "No words yet"
-msgstr ""
+msgstr "Ainda não há palavras"
 
 #: lib/claper_web/live/word_cloud_live/form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Question"
-msgstr ""
+msgstr "Pergunta"
 
 #: lib/claper_web/live/event_live/manage_interaction_options_component.ex
 #, elixir-autogen, elixir-format
 msgid "Show the word cloud to attendees"
-msgstr ""
+msgstr "Mostrar a nuvem de palavras aos participantes"
 
 #: lib/claper_web/live/event_live/manage_interaction_options_component.ex
 #, elixir-autogen, elixir-format
 msgid "Show this word again"
-msgstr ""
+msgstr "Mostrar esta palavra novamente"
 
 #: lib/claper_web/live/event_live/word_cloud_component.ex
 #, elixir-autogen, elixir-format
 msgid "Thanks! Your word has been added to the cloud."
-msgstr ""
+msgstr "Obrigado! Sua palavra foi adicionada à nuvem."
 
 #: lib/claper_web/live/word_cloud_live/form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "This will delete all words submitted and the word cloud itself, are you sure?"
-msgstr ""
+msgstr "Isso excluirá todas as palavras enviadas e a nuvem de palavras. Tem certeza?"
 
 #: lib/claper_web/live/event_live/word_cloud_component.ex
 #, elixir-autogen, elixir-format
 msgid "Type one word or a short phrase..."
-msgstr ""
+msgstr "Digite uma palavra ou frase curta..."
 
 #: lib/claper_web/live/event_live/word_cloud_component.ex
 #, elixir-autogen, elixir-format
 msgid "Type your own word or phrase"
-msgstr ""
+msgstr "Digite sua própria palavra ou frase"
 
 #: lib/claper_web/live/word_cloud_live/form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "What comes to mind when you hear..."
-msgstr ""
+msgstr "O que vem à sua mente quando ouve..."
 
 #: lib/claper_web/live/event_live/manage.html.heex
 #: lib/claper_web/live/event_live/manage_floating_action_bar.ex
 #: lib/claper_web/live/event_live/manage_interaction_list_component.ex
 #, elixir-autogen, elixir-format
 msgid "Word Cloud"
-msgstr ""
+msgstr "Nuvem de palavras"
 
 #: lib/claper_web/live/stat_live/index.html.heex
 #, elixir-autogen, elixir-format
 msgid "Word Clouds"
-msgstr ""
+msgstr "Nuvens de palavras"
 
 #: lib/claper_web/live/event_live/manage_interaction_options_component.ex
 #, elixir-autogen, elixir-format
 msgid "Words"
-msgstr ""
+msgstr "Palavras"
 
 #: lib/claper_web/live/word_cloud_live/form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "Words per attendee"
-msgstr ""
+msgstr "Palavras por participante"
 
 #: lib/claper_web/live/event_live/word_cloud_component.ex
 #, elixir-autogen, elixir-format
 msgid "You can send one more word."
 msgid_plural "You can send %{count} more words."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Você pode enviar mais uma palavra."
+msgstr[1] "Você pode enviar mais uma palavra."
 
 #: lib/claper_web/live/event_live/show.ex
 #, elixir-autogen, elixir-format
 msgid "You have already sent this word."
-msgstr ""
+msgstr "Você já enviou esta palavra."
 
 #: lib/claper_web/live/event_live/show.ex
 #, elixir-autogen, elixir-format
 msgid "You have already sent your word."
 msgid_plural "You have already sent your %{count} words."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Você já enviou sua palavra."
+msgstr[1] "Você já enviou sua palavra."
 
 #: lib/claper_web/live/event_live/show.ex
 #, elixir-autogen, elixir-format
 msgid "Your word could not be added. Please type a word or a short phrase."
-msgstr ""
+msgstr "Não foi possível adicionar sua palavra. Digite uma palavra ou frase curta."
 
 #: lib/claper_web/controllers/lti/registration_controller.ex
 #, elixir-autogen, elixir-format
 msgid "Registration with your platform failed. Please check your platform configuration and try again."
-msgstr ""
+msgstr "O cadastro na sua plataforma falhou. Confira as configurações da plataforma e tente novamente."
 
 #: lib/claper_web/live/user_settings_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Approve LMS sign-in"
-msgstr ""
+msgstr "Aprovar acesso pela plataforma de ensino"
 
 #: lib/claper_web/live/user_settings_live/show.ex
 #, elixir-autogen, elixir-format
 msgid "LMS sign-in has been approved."
-msgstr ""
+msgstr "O acesso pela plataforma de ensino foi aprovado."
 
 #: lib/claper_web/live/user_settings_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Local password"
-msgstr ""
+msgstr "Senha local"
 
 #: lib/claper_web/live/user_settings_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Only approve this LMS identity if you recognize the platform and platform user above. Enter your local password to restore LMS sign-in. If needed, reset your password first."
-msgstr ""
+msgstr "Aprove essa identidade da plataforma de ensino somente se reconhecer a plataforma e o usuário acima. Informe sua senha local para restabelecer o acesso. Se necessário, redefina sua senha antes."
 
 #: lib/claper_web/live/user_settings_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Platform user:"
-msgstr ""
+msgstr "Usuário da plataforma:"
 
 #: lib/claper_web/live/user_settings_live/show.ex
 #, elixir-autogen, elixir-format
 msgid "Unable to approve LMS sign-in. Check your local password."
-msgstr ""
+msgstr "Não foi possível aprovar o acesso pela plataforma de ensino. Confira sua senha local."
 
 #: lib/claper_web/templates/lti/registration/success.html.heex
 #, elixir-autogen, elixir-format
 msgid "An administrator of this Claper instance must approve this platform before it can be used. Until then, launches from this platform will be refused."
-msgstr ""
+msgstr "Um administrador desta instalação do Claper precisa aprovar a plataforma antes do uso. Até lá, os acessos dessa plataforma serão recusados."
 
 #: lib/claper_web/live/admin_live/lti_platform_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Approve"
-msgstr ""
+msgstr "Aprovar"
 
 #: lib/claper_web/live/admin_live/lti_platform_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Approved"
-msgstr ""
+msgstr "Aprovado"
 
 #: lib/claper_web/live/user_settings_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Approved by an administrator"
-msgstr ""
+msgstr "Aprovado por um administrador"
 
 #: lib/claper_web/templates/lti/registration/success.html.heex
 #, elixir-autogen, elixir-format
 msgid "Ask a Claper administrator to approve this platform"
-msgstr ""
+msgstr "Peça a um administrador do Claper que aprove esta plataforma"
 
 #: lib/claper_web/live/admin_live/lti_platform_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Client ID"
-msgstr ""
+msgstr "ID do cliente"
 
 #: lib/claper_web/live/user_settings_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Client ID:"
-msgstr ""
+msgstr "ID do cliente:"
 
 #: lib/claper_web/templates/lti/launch/confirm.html.heex
 #, elixir-autogen, elixir-format
 msgid "Continue as %{email}"
-msgstr ""
+msgstr "Continuar como %{email}"
 
 #: lib/claper_web/live/admin_live/lti_platform_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Issuer"
-msgstr ""
+msgstr "Emissor"
 
 #: lib/claper_web/live/admin_live/lti_platform_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "LMS platforms registered by non-administrators stay pending until approved. Pending platforms cannot sign users in or launch Claper."
-msgstr ""
+msgstr "As plataformas de ensino cadastradas por quem não é administrador aguardam aprovação. Plataformas pendentes não podem autenticar usuários nem iniciar o Claper."
 
 #: lib/claper_web/live/admin_live/lti_platform_live.ex
 #: lib/claper_web/templates/layout/admin_app.html.heex
 #, elixir-autogen, elixir-format
 msgid "LTI Platforms"
-msgstr ""
+msgstr "Plataformas LTI"
 
 #: lib/claper_web/live/admin_live/lti_platform_live.ex
 #, elixir-autogen, elixir-format
 msgid "LTI platform updated."
-msgstr ""
+msgstr "Plataforma LTI atualizada."
 
 #: lib/claper_web/live/admin_live/lti_platform_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Pending"
-msgstr ""
+msgstr "Pendente"
 
 #: lib/claper_web/live/user_settings_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Pending administrator approval"
-msgstr ""
+msgstr "Aguardando aprovação do administrador"
 
 #: lib/claper_web/live/user_settings_live/show.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Platform status:"
-msgstr ""
+msgstr "Status da plataforma:"
 
 #: lib/claper_web/live/admin_live/lti_platform_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Registered by"
-msgstr ""
+msgstr "Cadastrado por"
 
 #: lib/claper_web/live/user_settings_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Registered by:"
-msgstr ""
+msgstr "Cadastrado por:"
 
 #: lib/claper_web/live/user_settings_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Registered on:"
-msgstr ""
+msgstr "Cadastrado em:"
 
 #: lib/claper_web/live/admin_live/lti_platform_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Revoke"
-msgstr ""
+msgstr "Revogar"
 
 #: lib/claper_web/live/admin_live/lti_platform_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Revoke this platform? Its users will no longer be able to launch Claper."
-msgstr ""
+msgstr "Revogar esta plataforma? Os usuários não poderão mais iniciar o Claper por ela."
 
 #: lib/claper_web/templates/lti/launch/confirm.html.heex
 #, elixir-autogen, elixir-format
 msgid "Stay signed in as %{email}"
-msgstr ""
+msgstr "Continuar conectado como %{email}"
 
 #: lib/claper_web/templates/lti/launch/confirm.html.heex
 #, elixir-autogen, elixir-format
 msgid "Switch account?"
-msgstr ""
+msgstr "Trocar de conta?"
 
 #: lib/claper_web/live/user_settings_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "This LMS platform has not been approved by an administrator yet. LMS sign-in from it cannot be restored until an administrator approves the platform."
-msgstr ""
+msgstr "Esta plataforma de ensino ainda não foi aprovada por um administrador. O acesso por ela só poderá ser restabelecido após a aprovação."
 
 #: lib/claper_web/controllers/lti/launch_controller.ex
 #, elixir-autogen, elixir-format
 msgid "This account switch request is invalid or expired."
-msgstr ""
+msgstr "Esta solicitação de troca de conta é inválida ou expirou."
 
 #: lib/claper_web/live/user_settings_live/show.ex
 #, elixir-autogen, elixir-format
 msgid "Too many approval attempts. Please wait a minute and try again."
-msgstr ""
+msgstr "Muitas tentativas de aprovação. Aguarde um minuto e tente novamente."
 
 #: lib/claper_web/live/admin_live/lti_platform_live.ex
 #, elixir-autogen, elixir-format
 msgid "Unable to update LTI platform."
-msgstr ""
+msgstr "Não foi possível atualizar a plataforma LTI."
 
 #: lib/claper_web/templates/lti/launch/confirm.html.heex
 #, elixir-autogen, elixir-format
 msgid "You are currently signed in as %{email}."
-msgstr ""
+msgstr "Você está conectado como %{email}."
 
 #: lib/claper_web/templates/lti/launch/confirm.html.heex
 #, elixir-autogen, elixir-format
 msgid "Your learning platform wants to sign you in as %{email}."
-msgstr ""
+msgstr "Sua plataforma de ensino deseja conectar você como %{email}."
 
 #: lib/claper_web/live/admin_live/settings_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Enable LTI globally"
-msgstr ""
+msgstr "Ativar LTI globalmente"
 
 #: lib/claper_web/live/admin_live/settings_live.html.heex
 #, elixir-autogen, elixir-format, fuzzy
 msgid "LTI Settings"
-msgstr ""
+msgstr "Configurações LTI"
 
 #: lib/claper_web/live/admin_live/settings_live.ex
 #, elixir-autogen, elixir-format
 msgid "Unable to save settings."
-msgstr ""
+msgstr "Não foi possível salvar as configurações."
 
 #: lib/claper_web/live/admin_live/settings_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "When disabled, LTI registration, login, launches and outbound LMS requests are blocked. Existing registrations and quiz data are preserved."
-msgstr ""
+msgstr "Quando desativado, o cadastro LTI, o login, as inicializações e as solicitações enviadas às plataformas de ensino ficam bloqueados. Os cadastros e dados dos questionários existentes são preservados."
 
 #: lib/claper_web/templates/lti/registration/start.html.heex
 #, elixir-autogen, elixir-format
 msgid "Continue in a new tab to sign in and securely confirm platform registration. Return to your LMS when registration is complete."
-msgstr ""
+msgstr "Continue em uma nova aba para entrar e confirmar com segurança o cadastro da plataforma. Volte à sua plataforma de ensino quando terminar."
 
 #: lib/claper_web/templates/lti/registration/start.html.heex
 #, elixir-autogen, elixir-format
 msgid "Continue registration in Claper"
-msgstr ""
+msgstr "Continuar cadastro no Claper"
 
 #: lib/claper_web/live/admin_live/event_live.ex
 #, elixir-autogen, elixir-format
 msgid "Could not delete event"
-msgstr ""
+msgstr "Não foi possível excluir o evento"
 
 #: lib/claper_web/live/admin_live/user_live.ex
 #, elixir-autogen, elixir-format
 msgid "Could not delete user"
-msgstr ""
+msgstr "Não foi possível excluir o usuário"
 
 #: lib/claper_web/live/admin_live/user_live.ex
 #, elixir-autogen, elixir-format
 msgid "Could not disable user"
-msgstr ""
+msgstr "Não foi possível desativar o usuário"
 
 #: lib/claper_web/live/admin_live/user_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Disable this user? They will no longer be able to log in, but their data is kept."
-msgstr ""
+msgstr "Desativar este usuário? Ele não poderá mais entrar, mas seus dados serão preservados."
 
 #: lib/claper_web/live/admin_live/event_live.ex
 #, elixir-autogen, elixir-format
 msgid "Event and all its data deleted permanently"
-msgstr ""
+msgstr "Evento e todos os seus dados excluídos permanentemente"
 
 #: lib/claper_web/live/admin_live/event_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Permanently delete this event, its slides and all its interactions? This cannot be undone."
-msgstr ""
+msgstr "Excluir permanentemente este evento, seus slides e todas as interações? Essa ação não poderá ser desfeita."
 
 #: lib/claper_web/live/admin_live/user_live.ex
 #, elixir-autogen, elixir-format
 msgid "User and all their data deleted permanently"
-msgstr ""
+msgstr "Usuário e todos os seus dados excluídos permanentemente"
 
 #: lib/claper_web/live/admin_live/user_live.ex
 #, elixir-autogen, elixir-format
 msgid "User disabled successfully"
-msgstr ""
+msgstr "Usuário desativado com sucesso"
 
 #: lib/claper_web/live/admin_live/user_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "No events for this user."
-msgstr ""
+msgstr "Nenhum evento para este usuário."
 
 #: lib/claper_web/live/admin_live/event_live.html.heex
 #: lib/claper_web/live/admin_live/user_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Delete permanently"
-msgstr ""
+msgstr "Excluir permanentemente"
 
 #: lib/claper_web/live/admin_live/user_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Disable"
-msgstr ""
+msgstr "Desativar"
 
 #: lib/claper_web/live/admin_live/user_live.ex
 #, elixir-autogen, elixir-format
 msgid "Could not enable user: another active account uses this email"
-msgstr ""
+msgstr "Não foi possível ativar o usuário: outra conta ativa utiliza este e-mail"
 
 #: lib/claper_web/live/admin_live/user_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Enable"
-msgstr ""
+msgstr "Ativar"
 
 #: lib/claper_web/live/admin_live/user_live.ex
 #, elixir-autogen, elixir-format
 msgid "User enabled successfully"
-msgstr ""
+msgstr "Usuário ativado com sucesso"
 
 #: lib/claper_web/live/admin_live/user_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Permanently delete this user and all their events? Their interactions in other events are kept anonymously. This cannot be undone."
-msgstr ""
+msgstr "Excluir permanentemente este usuário e todos os seus eventos? As interações dele em outros eventos permanecerão anônimas. Essa ação não poderá ser desfeita."
 
 #: lib/claper_web/controllers/user_oidc_auth.ex
 #, elixir-autogen, elixir-format
 msgid "%{provider} did not share an email address for your account. Ask your administrator to include the email claim for Claper."
-msgstr ""
+msgstr "%{provider} não compartilhou um endereço de e-mail da sua conta. Peça ao administrador que inclua a informação de e-mail no Claper."
 
 #: lib/claper_web/templates/user_notifier/oidc_confirmation.html.heex
 #, elixir-autogen, elixir-format
 msgid "CONFIRM SIGN-IN"
-msgstr ""
+msgstr "CONFIRMAR ACESSO"
 
 #: lib/claper_web/templates/user_oidc/check_email.html.heex
 #, elixir-autogen, elixir-format
 msgid "Check your email to finish signing in with %{provider}."
-msgstr ""
+msgstr "Confira seu e-mail para concluir a entrada com %{provider}."
 
 #: lib/claper_web/templates/user_oidc/confirm.html.heex
 #, elixir-autogen, elixir-format
 msgid "Confirm and sign in"
-msgstr ""
+msgstr "Confirmar e entrar"
 
 #: lib/claper_web/templates/user_notifier/oidc_confirmation.html.heex
 #, elixir-autogen, elixir-format
 msgid "Confirm your sign-in"
-msgstr ""
+msgstr "Confirme seu acesso"
 
 #: lib/claper_web/notifiers/user_notifier.ex
 #, elixir-autogen, elixir-format
 msgid "Confirm your sign-in to Claper"
-msgstr ""
+msgstr "Confirme seu acesso ao Claper"
 
 #: lib/claper_web/templates/user_oidc/confirm.html.heex
 #, elixir-autogen, elixir-format
 msgid "Finish signing in with %{provider}"
-msgstr ""
+msgstr "Concluir acesso com %{provider}"
 
 #: lib/claper_web/templates/user_notifier/oidc_confirmation.html.heex
 #, elixir-autogen, elixir-format
 msgid "If this wasn't you, ignore this email. Your account stays unchanged."
-msgstr ""
+msgstr "Se não foi você, ignore este e-mail. Sua conta permanecerá inalterada."
 
 #: lib/claper_web/templates/user_oidc/error.html.heex
 #, elixir-autogen, elixir-format
 msgid "Sign-in failed"
-msgstr ""
+msgstr "Falha ao entrar"
 
 #: lib/claper_web/controllers/user_oidc_auth.ex
 #, elixir-autogen, elixir-format
 msgid "Signing in with %{provider} failed. Please try again."
-msgstr ""
+msgstr "Falha ao entrar com %{provider}. Tente novamente."
 
 #: lib/claper_web/templates/user_notifier/oidc_confirmation.html.heex
 #, elixir-autogen, elixir-format
 msgid "Someone signed in to Claper with %{provider} using this email address. If this was you, open the link below in the same browser to finish signing in. The link expires in 15 minutes."
-msgstr ""
+msgstr "Alguém entrou no Claper com %{provider} usando este e-mail. Se foi você, abra o link abaixo no mesmo navegador para concluir o acesso. O link expira em 15 minutos."
 
 #: lib/claper_web/controllers/user_oidc_auth.ex
 #, elixir-autogen, elixir-format
 msgid "This account cannot sign in. Contact your administrator."
-msgstr ""
+msgstr "Esta conta não pode entrar. Entre em contato com o administrador."
 
 #: lib/claper_web/controllers/user_oidc_auth.ex
 #, elixir-autogen, elixir-format
 msgid "This confirmation link is invalid, has expired, or was opened in a different browser. Sign in with %{provider} again from this browser."
-msgstr ""
+msgstr "Este link de confirmação é inválido, expirou ou foi aberto em outro navegador. Entre novamente com %{provider} neste navegador."
 
 #: lib/claper_web/templates/user_oidc/confirm.html.heex
 #, elixir-autogen, elixir-format
 msgid "This links your %{provider} sign-in to your Claper account."
-msgstr ""
+msgstr "Isso vincula seu acesso com %{provider} à sua conta no Claper."
 
 #: lib/claper_web/templates/user_oidc/check_email.html.heex
 #, elixir-autogen, elixir-format
 msgid "We sent a confirmation link to the email address of your account. Open it in this browser within 15 minutes."
-msgstr ""
+msgstr "Enviamos um link de confirmação ao e-mail da sua conta. Abra-o neste navegador em até 15 minutos."
 
 #: lib/claper_web/templates/event_notifier/recap.html.heex
 #, elixir-autogen, elixir-format
 msgid "%{name} ended automatically after %{count} day without activity, so other events can now use its code %{code}."
 msgid_plural "%{name} ended automatically after %{count} days without activity, so other events can now use its code %{code}."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%{name} foi encerrado automaticamente após %{count} dia sem atividade. O código %{code} já pode ser usado por outros eventos."
+msgstr[1] "%{name} foi encerrado automaticamente após %{count} dias sem atividade. O código %{code} já pode ser usado por outros eventos."
 
 #: lib/claper_web/templates/event_notifier/recap.html.heex
 #, elixir-autogen, elixir-format
 msgid "Here is the recap of %{name}."
-msgstr ""
+msgstr "Veja o resumo de %{name}."
 
 #: lib/claper_web/notifiers/event_notifier.ex
 #, elixir-autogen, elixir-format
 msgid "Recap of your event %{name}"
-msgstr ""
+msgstr "Resumo do seu evento %{name}"
 
 #: lib/claper_web/templates/event_notifier/recap.html.heex
 #, elixir-autogen, elixir-format
 msgid "View the full report"
-msgstr ""
+msgstr "Ver relatório completo"
 
 #: lib/claper_web/templates/event_notifier/recap.html.heex
 #, elixir-autogen, elixir-format
 msgid "Your event has ended"
-msgstr ""
+msgstr "Seu evento foi encerrado"
 
 #: lib/claper_web/live/event_live/event_form_component.html.heex
 #, elixir-autogen, elixir-format
 msgid "This event ends automatically after %{count} day without activity."
 msgid_plural "This event ends automatically after %{count} days without activity."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Este evento é encerrado automaticamente após %{count} dia sem atividade."
+msgstr[1] "Este evento é encerrado automaticamente após %{count} dias sem atividade."
