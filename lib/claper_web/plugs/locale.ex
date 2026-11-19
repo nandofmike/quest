@@ -90,6 +90,7 @@ defmodule ClaperWeb.Plugs.Locale do
         |> Enum.map(& &1.tag)
         |> Enum.reject(&is_nil/1)
         |> ensure_language_fallbacks()
+      |> Enum.map(&normalize_locale/1)
 
       _ ->
         []
@@ -106,6 +107,15 @@ defmodule ClaperWeb.Plugs.Locale do
       end
 
     %{tag: captures["tag"], quality: quality}
+  end
+
+  defp normalize_locale(tag) do
+    case String.downcase(tag) do
+      "pt" -> "pt_BR"
+      "pt-br" -> "pt_BR"
+      "pt_br" -> "pt_BR"
+      _ -> tag
+    end
   end
 
   defp ensure_language_fallbacks(tags) do
