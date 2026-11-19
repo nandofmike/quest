@@ -8,6 +8,7 @@ import moment from "moment-timezone";
 import "moment/locale/de";
 import "moment/locale/fr";
 import "moment/locale/es";
+import "moment/locale/pt-br";
 import "moment/locale/nl";
 import "moment/locale/it";
 import "moment/locale/hu";
@@ -37,14 +38,16 @@ const supportedLocales = window.claperConfig?.supportedLocales || [
 
 var locale =
   document.querySelector("html").getAttribute("lang") ||
-  navigator.language.split("-")[0];
+  navigator.language;
+
+locale = locale.toLowerCase().replace("_", "-");
+locale = locale.startsWith("pt") ? "pt_BR" : locale.split("-")[0];
 
 if (!supportedLocales.includes(locale)) {
-  locale = "en";
+  locale = "pt_BR";
 }
 
-moment.locale("en");
-moment.locale(locale);
+moment.locale(locale === "pt_BR" ? "pt-br" : locale);
 
 let csrfToken = document
   .querySelector("meta[name='csrf-token']")
