@@ -4,7 +4,7 @@ defmodule ClaperWeb.AudioSocket do
   channel "audio:*", ClaperWeb.AudioChannel
 
   @impl true
-  def connect(%{"token" => token}, socket, _connect_info) do
+  def connect(%{"token" => token}, socket, _connect_info) when is_binary(token) do
     case Phoenix.Token.verify(ClaperWeb.Endpoint, "audio_token", token, max_age: 86_400) do
       {:ok, %{user_id: user_id, event_uuid: event_uuid}} ->
         {:ok,
