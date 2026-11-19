@@ -5,8 +5,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 "Project-Id-Version: Claper\n"
-"Language: en\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: lib/claper_web/live/admin_live/settings_live.ex
 #: lib/claper_web/live/admin_live/settings_live.html.heex
@@ -291,7 +291,7 @@ msgstr "Enquete"
 msgid "Choice %{count}"
 msgid_plural "Choice %{count}"
 msgstr[0] "Opção %{count}"
-msgstr[1] "Opção %{count}"
+msgstr[1] "Opções %{count}"
 
 #: lib/claper_web/live/event_live/poll_component.ex
 #, elixir-autogen, elixir-format
@@ -454,7 +454,7 @@ msgstr "Isso excluirá todos os dados do evento e não poderá ser desfeito. Con
 msgid "attendee"
 msgid_plural "attendees"
 msgstr[0] "participante"
-msgstr[1] "participante"
+msgstr[1] "participantes"
 
 #: lib/claper_web/live/stat_live/index.html.heex
 #: lib/claper_web/templates/event_notifier/recap.html.heex
@@ -530,7 +530,7 @@ msgstr "Sua senha foi atualizada."
 msgid "Field %{count}"
 msgid_plural "Field %{count}"
 msgstr[0] "Campo %{count}"
-msgstr[1] "Campo %{count}"
+msgstr[1] "Campos %{count}"
 
 #: lib/claper_web/live/event_live/manage.html.heex
 #, elixir-autogen, elixir-format
@@ -3691,7 +3691,7 @@ msgstr "Palavras por participante"
 msgid "You can send one more word."
 msgid_plural "You can send %{count} more words."
 msgstr[0] "Você pode enviar mais uma palavra."
-msgstr[1] "Você pode enviar mais uma palavra."
+msgstr[1] "Você pode enviar mais %{count} palavras."
 
 #: lib/claper_web/live/event_live/show.ex
 #, elixir-autogen, elixir-format
@@ -3703,7 +3703,7 @@ msgstr "Você já enviou esta palavra."
 msgid "You have already sent your word."
 msgid_plural "You have already sent your %{count} words."
 msgstr[0] "Você já enviou sua palavra."
-msgstr[1] "Você já enviou sua palavra."
+msgstr[1] "Você já enviou suas %{count} palavras."
 
 #: lib/claper_web/live/event_live/show.ex
 #, elixir-autogen, elixir-format
