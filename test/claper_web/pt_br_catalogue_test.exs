@@ -25,11 +25,17 @@ defmodule ClaperWeb.PtBrCatalogueTest do
       for message <- po.messages do
         refute Expo.Message.has_flag?(message, "fuzzy")
 
-        for translation <- translations(message) do
+        for {translation, index} <- Enum.with_index(translations(message)) do
           refute String.trim(translation) == "",
                  "Tradução vazia para #{IO.iodata_to_binary(message.msgid)}"
 
-          assert placeholders(translation) == placeholders(IO.iodata_to_binary(message.msgid)),
+          source =
+            case {message, index} do
+              {%Plural{msgid_plural: plural}, 1} -> IO.iodata_to_binary(plural)
+              _ -> IO.iodata_to_binary(message.msgid)
+            end
+
+          assert placeholders(translation) == placeholders(source),
                  "Variáveis divergentes em #{IO.iodata_to_binary(message.msgid)}"
         end
       end
