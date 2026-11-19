@@ -63,6 +63,14 @@ defmodule ClaperWeb.LayoutViewTest do
   end
 
   describe "user layout" do
+    test "normalizes the Brazilian Portuguese language tag", %{conn: conn} do
+      role_fixture("user")
+      user = confirmed_user_fixture()
+      conn = log_in_user(conn, user)
+
+      assert get_with_language(conn, ~p"/users/settings", "pt-BR") =~ ~s(<html lang="pt-BR")
+    end
+
     test "sets the html lang to the locale from Accept-Language when the user has no locale",
          %{conn: conn} do
       role_fixture("user")
@@ -77,6 +85,12 @@ defmodule ClaperWeb.LayoutViewTest do
 
   describe "admin layout" do
     setup [:register_and_log_in_admin]
+
+    test "normalizes a saved Brazilian Portuguese language tag", %{conn: conn, admin: admin} do
+      {:ok, _admin} = Accounts.update_user_preferences(admin, %{locale: "pt_BR"})
+
+      assert get_with_language(conn, ~p"/admin", "en") =~ ~s(<html lang="pt-BR")
+    end
 
     test "sets the html lang to the locale from Accept-Language", %{conn: conn} do
       assert get_with_language(conn, ~p"/admin", "de") =~ ~s(<html lang="de")
