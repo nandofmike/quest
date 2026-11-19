@@ -5,9 +5,9 @@
   color-scheme: light;
 
   /* Map custom colors to DaisyUI semantic tokens */
-  --color-primary: #8611ed;           /* primary-500 */
+  --color-primary: #007aab;           /* primary-500 */
   --color-primary-content: #ffffff;
-  --color-secondary: #140553;         /* secondary-500 */
+  --color-secondary: #001530;         /* secondary-500 */
   --color-secondary-content: #ffffff;
   --color-accent: #507DAA;            /* neutral-500 */
   --color-accent-content: #ffffff;
@@ -61,29 +61,29 @@
   --text-body: 16px;
   --text-small-body: 14px;
 
-  /* Primary Colors - Claper Purple (from old theme.css) */
-  --color-primary-50: #f3defa;
-  --color-primary-100: #e8bef5;
-  --color-primary-200: #d08def;
-  --color-primary-300: #b85ce9;
-  --color-primary-400: #9f2be3;
-  --color-primary-500: #8611ed;
-  --color-primary-600: #6b0dbe;
-  --color-primary-700: #500a8e;
-  --color-primary-800: #35065f;
-  --color-primary-900: #1a032f;
+  /* Primary Colors - BSB LED blue */
+  --color-primary-50: #e6f7fd;
+  --color-primary-100: #b3e7fa;
+  --color-primary-200: #66cff5;
+  --color-primary-300: #00aeef;
+  --color-primary-400: #009dca;
+  --color-primary-500: #007aab;
+  --color-primary-600: #00628a;
+  --color-primary-700: #00497e;
+  --color-primary-800: #003359;
+  --color-primary-900: #001e35;
 
-  /* Secondary Colors - Navy Purple (from old theme.css) */
-  --color-secondary-50: #e8e6f0;
-  --color-secondary-100: #c5c0db;
-  --color-secondary-200: #9f97c2;
-  --color-secondary-300: #7a6ea9;
-  --color-secondary-400: #5d4f95;
-  --color-secondary-500: #140553;
-  --color-secondary-600: #100442;
-  --color-secondary-700: #0c0332;
-  --color-secondary-800: #080221;
-  --color-secondary-900: #040111;
+  /* Secondary Colors - BSB LED navy */
+  --color-secondary-50: #e6e9ef;
+  --color-secondary-100: #c2c9d6;
+  --color-secondary-200: #8f9bb3;
+  --color-secondary-300: #5c6d90;
+  --color-secondary-400: #2e4267;
+  --color-secondary-500: #001530;
+  --color-secondary-600: #00112a;
+  --color-secondary-700: #000d20;
+  --color-secondary-800: #000a15;
+  --color-secondary-900: #00050b;
 
   /* Neutral Colors - Wedgewood (from old theme.css) */
   --color-neutral-50: #F0F4F8;

@@ -19,7 +19,7 @@ defmodule ClaperWeb.EventLive.ManageAttendeesOptionsComponent do
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="icon icon-tabler icons-tabler-outline icon-tabler-mood-cog shrink-0 text-[#140553]"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-mood-cog shrink-0 text-[#001530]"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M21 12a9 9 0 1 0 -8.983 9" />
@@ -34,7 +34,7 @@ defmodule ClaperWeb.EventLive.ManageAttendeesOptionsComponent do
           <path d="M15 10h.01" />
           <path d="M9.5 15c.658 .64 1.56 1 2.5 1" />
         </svg>
-        <span class="font-bold text-sm text-[#140553]">{gettext("Attendee Settings")}</span>
+        <span class="font-bold text-sm text-[#001530]">{gettext("Attendee Settings")}</span>
       </div>
 
       <div class="space-y-2 px-1">
@@ -126,7 +126,7 @@ defmodule ClaperWeb.EventLive.ManageAttendeesOptionsComponent do
       "flex items-center gap-2 rounded-full pl-2 pr-3 py-2 overflow-hidden transition-colors",
       if(@disabled, do: "opacity-50"),
       if(@checked,
-        do: "bg-[#f3defa] border-b-2 border-primary",
+        do: "bg-primary-50 border-b-2 border-primary",
         else: "bg-white border border-gray-200"
       )
     ]}>

@@ -123,7 +123,7 @@ defmodule ClaperWeb.Lti.RegistrationControllerTest do
 
       html = html_response(conn, 200)
       assert html =~ "Registration completed"
-      assert html =~ "An administrator of this Claper instance must approve this platform"
+      assert html =~ "An administrator of this Quest instance must approve this platform"
 
       registration = Repo.get_by!(Registration, client_id: "client-123")
       assert registration.approved_at == nil
@@ -142,7 +142,7 @@ defmodule ClaperWeb.Lti.RegistrationControllerTest do
       conn = post(conn, ~p"/lti/register", @params)
 
       html = html_response(conn, 200)
-      refute html =~ "An administrator of this Claper instance must approve this platform"
+      refute html =~ "An administrator of this Quest instance must approve this platform"
 
       registration = Repo.get_by!(Registration, client_id: "client-123")
       assert registration.approved_at

@@ -1,9 +1,9 @@
 <style>
   body {
     background:
-      radial-gradient(circle at top, rgba(134, 17, 237, 0.18), transparent 35%),
+      radial-gradient(circle at top, rgba(0, 122, 171, 0.22), transparent 35%),
       radial-gradient(circle at bottom left, rgba(6, 182, 212, 0.1), transparent 30%),
-      linear-gradient(180deg, #120641 0%, #0c0332 100%);
+      linear-gradient(180deg, #001530 0%, #000a15 100%);
     min-height: 100vh;
   }
 
@@ -36,7 +36,7 @@
 <div class="min-h-screen">
   <div id="menu" class="w-full py-4 px-5 md:px-8 relative z-20">
     <div class="flex items-center justify-between max-w-6xl mx-auto">
-      <img src="/images/logo.svg" class="h-8" />
+      <img src="/images/logo-light.svg" class="h-8" alt="BSB LED" />
 
       <div
         id="join-mobile-menu"
@@ -55,7 +55,7 @@
           </svg>
         </button>
         <a
-          href="https://get.claper.co/"
+          href="https://bsbled.com.br/"
           class="text-lg font-semibold text-white hover:text-primary-300 transition-colors"
         >
           {gettext("About")}
@@ -85,7 +85,7 @@
 
       <div class="hidden md:flex items-center gap-6">
         <a
-          href="https://get.claper.co/"
+          href="https://bsbled.com.br/"
           class="text-sm text-white/80 font-medium hover:text-white transition-colors"
         >
           {gettext("About")}
@@ -163,10 +163,16 @@
         <% end %>
       <% end %>
 
-      <div class="mt-16 text-sm text-white/45">
+      <div
+        :if={
+          Application.get_env(:claper, :enable_account_creation) &&
+            !Application.get_env(:claper, :oidc)[:disable_password_login]
+        }
+        class="mt-16 text-sm text-white/45"
+      >
         <span>{gettext("Are you a presenter?")}</span>
         <a
-          href="https://get.claper.co/"
+          href={~p"/users/register"}
           class="ml-2 font-medium text-cyan-400 transition-colors hover:text-cyan-300"
         >
           {gettext("Start creating for free")}

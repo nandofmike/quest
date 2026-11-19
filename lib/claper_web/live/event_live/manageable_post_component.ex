@@ -195,13 +195,13 @@ defmodule ClaperWeb.EventLive.ManageablePostComponent do
         <% bubble_bg =
           cond do
             @post.pinned && is_question ->
-              "background: linear-gradient(92deg, rgba(0,0,0,0) 0%, rgba(251,191,36,0.38) 50%, rgba(134,17,237,0.38) 98%), #fff"
+              "background: linear-gradient(92deg, rgba(0,0,0,0) 0%, rgba(251,191,36,0.38) 50%, rgba(0,122,171,0.38) 98%), #fff"
 
             @post.pinned ->
               "background: linear-gradient(92deg, rgba(0,0,0,0) 0%, rgba(251,191,36,0.38) 98%), #fff"
 
             is_question ->
-              "background: linear-gradient(92deg, rgba(0,0,0,0) 0%, rgba(134,17,237,0.38) 98%), #fff"
+              "background: linear-gradient(92deg, rgba(0,0,0,0) 0%, rgba(0,122,171,0.38) 98%), #fff"
 
             true ->
               "background: #fff"

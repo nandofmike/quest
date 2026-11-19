@@ -217,12 +217,6 @@ msgstr "Ändra den e-postadress du vill koppla till ditt konto."
 msgid "Update your email"
 msgstr "Ändra din e-postadress"
 
-#: lib/claper_web/notifiers/user_notifier.ex
-#: lib/claper_web/templates/user_notifier/magic.html.heex
-#, elixir-autogen, elixir-format
-msgid "Connect to Claper"
-msgstr "Anslut till Claper"
-
 #: lib/claper_web/templates/user_notifier/magic.html.heex
 #, elixir-autogen, elixir-format
 msgid "ACCESS TO MY ACCOUNT"
@@ -418,13 +412,6 @@ msgid "Click on <span style='font-weight: 700'>Present/Customize</span> to add i
 msgstr ""
 "Klicka på <span style='font-weight: 700'>Presentera/Anpassa</span> för att lägga till "
 "interaktion i dina bilder"
-
-#: lib/claper_web/templates/user_notifier/welcome.html.heex
-#, elixir-autogen, elixir-format
-msgid "Congrats! You've taken the first step to improving your presentations. Here are the next steps to create step up your presentations with Claper:"
-msgstr ""
-"Grattis! Du har tagit det första steget för att förbättra dina presentationer. "
-"Här är nästa steg för att göra dina presentationer mer engagerande med Claper:"
 
 #: lib/claper_web/templates/user_notifier/welcome.html.heex
 #, elixir-autogen, elixir-format
@@ -982,12 +969,6 @@ msgstr "Aktivera reaktioner"
 msgid "Activate the tool in your LMS"
 msgstr "Aktivera verktyget i ditt LMS"
 
-#: lib/claper_web/templates/lti/registration/new.html.heex
-#: lib/claper_web/templates/lti/registration/start.html.heex
-#, elixir-autogen, elixir-format
-msgid "Bring Claper to your LMS"
-msgstr "Ta Claper till ditt LMS"
-
 #: lib/claper_web/templates/lti/registration/success.html.heex
 #, elixir-autogen, elixir-format
 msgid "Check the permissions to share name and email of users"
@@ -1023,11 +1004,6 @@ msgstr "Du kan inte utföra denna åtgärd"
 #, elixir-autogen, elixir-format
 msgid "Your next steps"
 msgstr "Dina nästa steg"
-
-#: lib/claper_web/templates/lti/registration/new.html.heex
-#, elixir-autogen, elixir-format
-msgid "Add Claper"
-msgstr "Lägg till Claper"
 
 #: lib/claper_web/live/user_settings_live/show.html.heex
 #, elixir-autogen, elixir-format
@@ -1128,11 +1104,6 @@ msgstr "Det saknades en nödvändig säkerhetstoken eller så var den ogiltig."
 #, elixir-autogen, elixir-format
 msgid "CSRF Verification Failed"
 msgstr "CSRF-verifiering misslyckades"
-
-#: lib/claper_web/templates/error/csrf_error.html.heex
-#, elixir-autogen, elixir-format
-msgid "Clear cookies (at least for Claper domain)"
-msgstr "Rensa cookies (åtminstone för Claper-domänen)"
 
 #: lib/claper_web/templates/error/csrf_error.html.heex
 #, elixir-autogen, elixir-format
@@ -2369,18 +2340,8 @@ msgstr "Minst 6 tecken"
 
 #: lib/claper_web/templates/user_registration/new.html.heex
 #, elixir-autogen, elixir-format
-msgid "Thousands of presenters already use Claper to engage their audience in real time."
-msgstr "Tusentals presentatörer använder redan Claper för att få sin publik att delta i realtid."
-
-#: lib/claper_web/templates/user_registration/new.html.heex
-#, elixir-autogen, elixir-format
 msgid "By creating an account, you agree to our"
 msgstr "Genom att skapa ett konto godkänner du vår"
-
-#: lib/claper_web/templates/user_registration/new.html.heex
-#, elixir-autogen, elixir-format
-msgid "Join 6,000+ speakers"
-msgstr "Anslut dig till 6 000+ talare"
 
 #: lib/claper_web/live/event_live/join.html.heex
 #: lib/claper_web/templates/user_registration/new.html.heex
@@ -3781,11 +3742,6 @@ msgstr ""
 msgid "Unable to approve LMS sign-in. Check your local password."
 msgstr ""
 
-#: lib/claper_web/templates/lti/registration/success.html.heex
-#, elixir-autogen, elixir-format
-msgid "An administrator of this Claper instance must approve this platform before it can be used. Until then, launches from this platform will be refused."
-msgstr ""
-
 #: lib/claper_web/live/admin_live/lti_platform_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Approve"
@@ -3799,11 +3755,6 @@ msgstr ""
 #: lib/claper_web/live/user_settings_live/show.html.heex
 #, elixir-autogen, elixir-format
 msgid "Approved by an administrator"
-msgstr ""
-
-#: lib/claper_web/templates/lti/registration/success.html.heex
-#, elixir-autogen, elixir-format
-msgid "Ask a Claper administrator to approve this platform"
 msgstr ""
 
 #: lib/claper_web/live/admin_live/lti_platform_live.html.heex
@@ -3824,11 +3775,6 @@ msgstr ""
 #: lib/claper_web/live/admin_live/lti_platform_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Issuer"
-msgstr ""
-
-#: lib/claper_web/live/admin_live/lti_platform_live.html.heex
-#, elixir-autogen, elixir-format
-msgid "LMS platforms registered by non-administrators stay pending until approved. Pending platforms cannot sign users in or launch Claper."
 msgstr ""
 
 #: lib/claper_web/live/admin_live/lti_platform_live.ex
@@ -3875,11 +3821,6 @@ msgstr ""
 #: lib/claper_web/live/admin_live/lti_platform_live.html.heex
 #, elixir-autogen, elixir-format
 msgid "Revoke"
-msgstr ""
-
-#: lib/claper_web/live/admin_live/lti_platform_live.html.heex
-#, elixir-autogen, elixir-format
-msgid "Revoke this platform? Its users will no longer be able to launch Claper."
 msgstr ""
 
 #: lib/claper_web/templates/lti/launch/confirm.html.heex
@@ -3945,11 +3886,6 @@ msgstr ""
 #: lib/claper_web/templates/lti/registration/start.html.heex
 #, elixir-autogen, elixir-format
 msgid "Continue in a new tab to sign in and securely confirm platform registration. Return to your LMS when registration is complete."
-msgstr ""
-
-#: lib/claper_web/templates/lti/registration/start.html.heex
-#, elixir-autogen, elixir-format
-msgid "Continue registration in Claper"
 msgstr ""
 
 #: lib/claper_web/live/admin_live/event_live.ex
@@ -4028,11 +3964,6 @@ msgstr "Användaren har aktiverats"
 msgid "Permanently delete this user and all their events? Their interactions in other events are kept anonymously. This cannot be undone."
 msgstr "Ta bort den här användaren och alla dess evenemang permanent? Dess interaktioner i andra evenemang behålls anonymt. Detta kan inte ångras."
 
-#: lib/claper_web/controllers/user_oidc_auth.ex
-#, elixir-autogen, elixir-format
-msgid "%{provider} did not share an email address for your account. Ask your administrator to include the email claim for Claper."
-msgstr ""
-
 #: lib/claper_web/templates/user_notifier/oidc_confirmation.html.heex
 #, elixir-autogen, elixir-format
 msgid "CONFIRM SIGN-IN"
@@ -4051,11 +3982,6 @@ msgstr ""
 #: lib/claper_web/templates/user_notifier/oidc_confirmation.html.heex
 #, elixir-autogen, elixir-format
 msgid "Confirm your sign-in"
-msgstr ""
-
-#: lib/claper_web/notifiers/user_notifier.ex
-#, elixir-autogen, elixir-format
-msgid "Confirm your sign-in to Claper"
 msgstr ""
 
 #: lib/claper_web/templates/user_oidc/confirm.html.heex
@@ -4078,11 +4004,6 @@ msgstr ""
 msgid "Signing in with %{provider} failed. Please try again."
 msgstr ""
 
-#: lib/claper_web/templates/user_notifier/oidc_confirmation.html.heex
-#, elixir-autogen, elixir-format
-msgid "Someone signed in to Claper with %{provider} using this email address. If this was you, open the link below in the same browser to finish signing in. The link expires in 15 minutes."
-msgstr ""
-
 #: lib/claper_web/controllers/user_oidc_auth.ex
 #, elixir-autogen, elixir-format
 msgid "This account cannot sign in. Contact your administrator."
@@ -4091,11 +4012,6 @@ msgstr ""
 #: lib/claper_web/controllers/user_oidc_auth.ex
 #, elixir-autogen, elixir-format
 msgid "This confirmation link is invalid, has expired, or was opened in a different browser. Sign in with %{provider} again from this browser."
-msgstr ""
-
-#: lib/claper_web/templates/user_oidc/confirm.html.heex
-#, elixir-autogen, elixir-format
-msgid "This links your %{provider} sign-in to your Claper account."
 msgstr ""
 
 #: lib/claper_web/templates/user_oidc/check_email.html.heex
@@ -4136,3 +4052,82 @@ msgid "This event ends automatically after %{count} day without activity."
 msgid_plural "This event ends automatically after %{count} days without activity."
 msgstr[0] "Det här evenemanget avslutas automatiskt efter %{count} dag utan aktivitet."
 msgstr[1] "Det här evenemanget avslutas automatiskt efter %{count} dagar utan aktivitet."
+
+#: lib/claper_web/controllers/user_oidc_auth.ex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "%{provider} did not share an email address for your account. Ask your administrator to include the email claim for Quest."
+msgstr ""
+
+#: lib/claper_web/templates/lti/registration/new.html.heex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Add Quest"
+msgstr "Lägg till fråga"
+
+#: lib/claper_web/templates/lti/registration/success.html.heex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "An administrator of this Quest instance must approve this platform before it can be used. Until then, launches from this platform will be refused."
+msgstr ""
+
+#: lib/claper_web/templates/lti/registration/success.html.heex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Ask a Quest administrator to approve this platform"
+msgstr ""
+
+#: lib/claper_web/templates/lti/registration/new.html.heex
+#: lib/claper_web/templates/lti/registration/start.html.heex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Bring Quest to your LMS"
+msgstr "Ta Claper till ditt LMS"
+
+#: lib/claper_web/templates/error/csrf_error.html.heex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Clear cookies (at least for Quest domain)"
+msgstr "Rensa cookies (åtminstone för Claper-domänen)"
+
+#: lib/claper_web/notifiers/user_notifier.ex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Confirm your sign-in to Quest"
+msgstr ""
+
+#: lib/claper_web/templates/user_notifier/welcome.html.heex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Congrats! You've taken the first step to improving your presentations. Here are the next steps to create step up your presentations with Quest:"
+msgstr ""
+"Grattis! Du har tagit det första steget för att förbättra dina presentationer. "
+"Här är nästa steg för att göra dina presentationer mer engagerande med Claper:"
+
+#: lib/claper_web/notifiers/user_notifier.ex
+#: lib/claper_web/templates/user_notifier/magic.html.heex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Connect to Quest"
+msgstr "Anslut till Claper"
+
+#: lib/claper_web/templates/lti/registration/start.html.heex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Continue registration in Quest"
+msgstr ""
+
+#: lib/claper_web/templates/user_registration/new.html.heex
+#, elixir-autogen, elixir-format
+msgid "Engage your audience in real time with polls, questions and interactive presentations."
+msgstr ""
+
+#: lib/claper_web/live/admin_live/lti_platform_live.html.heex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "LMS platforms registered by non-administrators stay pending until approved. Pending platforms cannot sign users in or launch Quest."
+msgstr ""
+
+#: lib/claper_web/live/admin_live/lti_platform_live.html.heex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Revoke this platform? Its users will no longer be able to launch Quest."
+msgstr ""
+
+#: lib/claper_web/templates/user_notifier/oidc_confirmation.html.heex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Someone signed in to Quest with %{provider} using this email address. If this was you, open the link below in the same browser to finish signing in. The link expires in 15 minutes."
+msgstr ""
+
+#: lib/claper_web/templates/user_oidc/confirm.html.heex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "This links your %{provider} sign-in to your Quest account."
+msgstr ""

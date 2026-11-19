@@ -1,7 +1,7 @@
 .ticket-stage {
-    --stage: #0b0710;
+    --stage: #000a15;
     --paper-ink: rgba(255, 255, 255, 0.92);
-    --accent: #5b16c9;
+    --accent: #007aab;
     --accent-line: color-mix(in srgb, var(--accent) 55%, white 0%);
     --notch: var(--stage);
     --mono:

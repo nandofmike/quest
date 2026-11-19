@@ -24,7 +24,7 @@ defmodule ClaperWeb.EventLive.ManageSlideSidebarComponent do
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="icon icon-tabler icons-tabler-outline icon-tabler-presentation shrink-0 text-[#140553]"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-presentation shrink-0 text-[#001530]"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M3 4l18 0" />
@@ -34,7 +34,7 @@ defmodule ClaperWeb.EventLive.ManageSlideSidebarComponent do
           <path d="M8 12l3 -3l2 2l3 -3" />
         </svg>
 
-        <span class="font-bold text-sm text-[#140553]">{gettext("Content")}</span>
+        <span class="font-bold text-sm text-[#001530]">{gettext("Content")}</span>
       </div>
       <div id="slide-sortable" phx-hook="SlideSortable" class="flex-1 overflow-y-auto p-3 space-y-2">
         <button

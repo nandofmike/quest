@@ -1,7 +1,7 @@
 <h1 class="text-3xl font-bold mb-2">{@page_title}</h1>
 <p class="text-base-content/70 mb-6">
   {gettext(
-    "LMS platforms registered by non-administrators stay pending until approved. Pending platforms cannot sign users in or launch Claper."
+    "LMS platforms registered by non-administrators stay pending until approved. Pending platforms cannot sign users in or launch Quest."
   )}
 </p>
 
@@ -49,7 +49,7 @@
             phx-click="revoke"
             phx-value-id={registration.id}
             data-confirm={
-              gettext("Revoke this platform? Its users will no longer be able to launch Claper.")
+              gettext("Revoke this platform? Its users will no longer be able to launch Quest.")
             }
             class="btn btn-error btn-outline btn-sm"
           >

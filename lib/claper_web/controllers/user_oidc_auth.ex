@@ -158,7 +158,7 @@ defmodule ClaperWeb.UserOidcAuth do
 
   defp failure_message(:missing_email) do
     gettext(
-      "%{provider} did not share an email address for your account. Ask your administrator to include the email claim for Claper.",
+      "%{provider} did not share an email address for your account. Ask your administrator to include the email claim for Quest.",
       provider: provider_name()
     )
   end

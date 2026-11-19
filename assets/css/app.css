@@ -17,11 +17,11 @@
 }
 
 @utility btn-gradient {
-  background: linear-gradient(to bottom right, var(--color-cyan-500, #06b6d4), var(--color-primary-500, #8611ed));
+  background: linear-gradient(to bottom right, var(--color-cyan-500, #06b6d4), var(--color-primary-500, #007aab));
   border: none;
   color: white;
   &:hover {
-    background: linear-gradient(to bottom right, var(--color-cyan-600, #0891b2), var(--color-primary-600, #6b0dbe));
+    background: linear-gradient(to bottom right, var(--color-cyan-600, #0891b2), var(--color-primary-600, #00628a));
   }
 }
 
@@ -77,8 +77,8 @@
 .attendee-composer {
   background: linear-gradient(
     333deg,
-    rgba(17, 134, 213, 0.8) 0%,
-    rgba(163, 39, 255, 0.8) 100%
+    rgba(0, 122, 171, 0.8) 0%,
+    rgba(0, 21, 48, 0.8) 100%
   );
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.32);
   backdrop-filter: blur(18px) saturate(140%);

@@ -19,7 +19,7 @@ defmodule ClaperWeb.EventLive.ManagePresentationOptionsComponent do
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="icon icon-tabler icons-tabler-outline icon-tabler-eye-cog shrink-0 text-[#140553]"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-eye-cog shrink-0 text-[#001530]"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
@@ -32,7 +32,7 @@ defmodule ClaperWeb.EventLive.ManagePresentationOptionsComponent do
           <path d="M15.97 17.25l1.3 .75" />
           <path d="M20.733 20l1.3 .75" />
         </svg>
-        <span class="font-bold text-sm text-[#140553]">{gettext("Presentation Settings")}</span>
+        <span class="font-bold text-sm text-[#001530]">{gettext("Presentation Settings")}</span>
       </div>
 
       <div class="space-y-2 px-1">
@@ -153,7 +153,7 @@ defmodule ClaperWeb.EventLive.ManagePresentationOptionsComponent do
       "flex items-center gap-2 rounded-full pl-2 pr-3 py-2 overflow-hidden transition-colors",
       if(@disabled, do: "opacity-50"),
       if(@checked,
-        do: "bg-[#f3defa] border-b-2 border-primary",
+        do: "bg-primary-50 border-b-2 border-primary",
         else: "bg-white border border-gray-200"
       )
     ]}>

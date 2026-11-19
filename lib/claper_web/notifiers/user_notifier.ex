@@ -9,7 +9,7 @@ defmodule ClaperWeb.Notifiers.UserNotifier do
       {Application.get_env(:claper, :mail) |> Keyword.get(:from_name),
        Application.get_env(:claper, :mail) |> Keyword.get(:from)}
     )
-    |> subject(gettext("Connect to Claper"))
+    |> subject(gettext("Connect to Quest"))
     |> render_body("magic.html", %{url: url})
   end
 
@@ -20,7 +20,7 @@ defmodule ClaperWeb.Notifiers.UserNotifier do
       {Application.get_env(:claper, :mail) |> Keyword.get(:from_name),
        Application.get_env(:claper, :mail) |> Keyword.get(:from)}
     )
-    |> subject(gettext("Confirm your sign-in to Claper"))
+    |> subject(gettext("Confirm your sign-in to Quest"))
     |> render_body("oidc_confirmation.html", %{provider: provider, url: url})
   end
 

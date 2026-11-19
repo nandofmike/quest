@@ -16,12 +16,12 @@
         <div class="max-w-xl w-full space-y-4">
           <div class="lg:text-left text-center">
             <div class="mt-6 font-bold text-gray-100 flex items-center gap-x-3">
-              <img src="/images/logo.svg" class="h-10 w-auto inline" />
+              <img src="/images/logo-light.svg" class="h-10 w-auto inline" alt="BSB LED" />
               <span class="text-2xl font-thin text-white">x</span>
               <img src="/images/lms-platforms.png" class="h-12 w-auto inline" />
             </div>
             <h2 class="mt-6 text-4xl md:text-6xl font-bold text-gray-100">
-              {gettext("Bring Claper to your LMS")}
+              {gettext("Bring Quest to your LMS")}
             </h2>
             <p class="mt-10 text-2xl md:text-4xl text-gray-200">
               {gettext("Register your platform")}
@@ -34,7 +34,7 @@
             <input type="hidden" name="openid_configuration" value={@conf} />
             <input type="hidden" name="registration_token" value={@token} />
             <button :if={@current_user} type="submit" class="btn btn-primary">
-              {gettext("Add Claper")}
+              {gettext("Add Quest")}
             </button>
             <p :if={!@current_user} class="text-white italic">
               {gettext("You must log in to continue")}

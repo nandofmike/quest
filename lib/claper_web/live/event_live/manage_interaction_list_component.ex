@@ -81,7 +81,7 @@ defmodule ClaperWeb.EventLive.ManageInteractionListComponent do
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="icon icon-tabler icons-tabler-outline icon-tabler-north-star shrink-0 text-[#140553]"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-north-star shrink-0 text-[#001530]"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M3 12h18" />
@@ -89,7 +89,7 @@ defmodule ClaperWeb.EventLive.ManageInteractionListComponent do
           <path d="M7.5 7.5l9 9" />
           <path d="M7.5 16.5l9 -9" />
         </svg>
-        <span class="font-bold text-sm text-[#140553]">{gettext("Interactions")}</span>
+        <span class="font-bold text-sm text-[#001530]">{gettext("Interactions")}</span>
       </div>
 
       <div class="grid grid-cols-4 gap-1">
@@ -344,7 +344,7 @@ defmodule ClaperWeb.EventLive.ManageInteractionListComponent do
 
         <.link
           patch={~p"/e/#{@event_code}/manage/edit/transcription/#{@transcription_config.id}"}
-          class="flex items-center justify-center rounded-full w-[42px] h-[41px] shrink-0 border border-[#140553] text-[#140553]"
+          class="flex items-center justify-center rounded-full w-[42px] h-[41px] shrink-0 border border-[#001530] text-[#001530]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -355,7 +355,7 @@ defmodule ClaperWeb.EventLive.ManageInteractionListComponent do
           >
             <path
               d="M3.33301 17.4998H16.6663M4.72134 10.989C4.36602 11.3451 4.16643 11.8276 4.16634 12.3306V14.9998H6.85217C7.35551 14.9998 7.83801 14.7998 8.19384 14.4431L16.1105 6.52229C16.4657 6.16612 16.6652 5.68364 16.6652 5.18063C16.6652 4.67761 16.4657 4.19513 16.1105 3.83896L15.3288 3.05563C15.1526 2.87925 14.9432 2.73935 14.7129 2.64393C14.4825 2.54851 14.2355 2.49943 13.9862 2.49951C13.7368 2.49959 13.4899 2.54882 13.2596 2.64438C13.0292 2.73995 12.82 2.87998 12.6438 3.05646L4.72134 10.989Z"
-              stroke="#140553"
+              stroke="#001530"
               stroke-width="1.5"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -508,7 +508,7 @@ defmodule ClaperWeb.EventLive.ManageInteractionListComponent do
           <.link
             patch={edit_path(@event_code, interaction)}
             draggable="false"
-            class="flex items-center justify-center rounded-full w-[42px] h-[41px] shrink-0 border border-[#140553] text-[#140553]"
+            class="flex items-center justify-center rounded-full w-[42px] h-[41px] shrink-0 border border-[#001530] text-[#001530]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -519,7 +519,7 @@ defmodule ClaperWeb.EventLive.ManageInteractionListComponent do
             >
               <path
                 d="M3.33301 17.4998H16.6663M4.72134 10.989C4.36602 11.3451 4.16643 11.8276 4.16634 12.3306V14.9998H6.85217C7.35551 14.9998 7.83801 14.7998 8.19384 14.4431L16.1105 6.52229C16.4657 6.16612 16.6652 5.68364 16.6652 5.18063C16.6652 4.67761 16.4657 4.19513 16.1105 3.83896L15.3288 3.05563C15.1526 2.87925 14.9432 2.73935 14.7129 2.64393C14.4825 2.54851 14.2355 2.49943 13.9862 2.49951C13.7368 2.49959 13.4899 2.54882 13.2596 2.64438C13.0292 2.73995 12.82 2.87998 12.6438 3.05646L4.72134 10.989Z"
-                stroke="#140553"
+                stroke="#001530"
                 stroke-width="1.5"
                 stroke-linecap="round"
                 stroke-linejoin="round"

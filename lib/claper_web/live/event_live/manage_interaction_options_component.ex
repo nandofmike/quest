@@ -19,7 +19,7 @@ defmodule ClaperWeb.EventLive.ManageInteractionOptionsComponent do
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="icon icon-tabler icons-tabler-outline icon-tabler-pointer-cog shrink-0 text-[#140553]"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-pointer-cog shrink-0 text-[#001530]"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M15.774 13.218l-.996 -.996l3.113 -2.09a1.2 1.2 0 0 0 -.309 -2.228l-13.582 -3.904l3.904 13.563a1.2 1.2 0 0 0 2.228 .308l2.09 -3.093l.343 .343" />
@@ -31,7 +31,7 @@ defmodule ClaperWeb.EventLive.ManageInteractionOptionsComponent do
           <path d="M15.97 17.25l1.3 .75" />
           <path d="M20.733 20l1.3 .75" />
         </svg>
-        <span class="font-bold text-sm text-[#140553]">
+        <span class="font-bold text-sm text-[#001530]">
           {gettext("Current Interaction Settings")}
         </span>
       </div>
@@ -261,7 +261,7 @@ defmodule ClaperWeb.EventLive.ManageInteractionOptionsComponent do
       "flex items-center gap-2 rounded-full pl-2 pr-3 py-2 overflow-hidden transition-colors",
       if(@disabled, do: "opacity-50"),
       if(@checked,
-        do: "bg-[#f3defa] border-b-2 border-primary",
+        do: "bg-primary-50 border-b-2 border-primary",
         else: "bg-white border border-gray-200"
       )
     ]}>

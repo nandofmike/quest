@@ -7,7 +7,7 @@
       </p>
       <p :if={!@approved} id="registration-pending" class="mt-6 text-yellow-300">
         {gettext(
-          "An administrator of this Claper instance must approve this platform before it can be used. Until then, launches from this platform will be refused."
+          "An administrator of this Quest instance must approve this platform before it can be used. Until then, launches from this platform will be refused."
         )}
       </p>
       <div class="my-8">
@@ -17,7 +17,7 @@
         <div class="mt-4 bg-gray-800 p-6 rounded-lg shadow-lg border border-white">
           <ol class="list-decimal list-inside text-gray-200">
             <li :if={!@approved} class="mb-2">
-              {gettext("Ask a Claper administrator to approve this platform")}
+              {gettext("Ask a Quest administrator to approve this platform")}
             </li>
             <li class="mb-2">{gettext("Activate the tool in your LMS")}</li>
             <li class="mb-2">{gettext("Configure it to be opened in a new window")}</li>
