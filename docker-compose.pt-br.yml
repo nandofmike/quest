@@ -1,0 +1,9 @@
+# Compila o código deste fork, incluindo os catálogos pt_BR.
+# Uso: docker compose -f docker-compose.yml -f docker-compose.pt-br.yml up -d --build
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: quest:pt-br
+    pull_policy: build
