@@ -315,6 +315,7 @@ case get_var_from_path_or_env(config_dir, "MAIL_TRANSPORT", "local") do
             versions: [:"tlsv1.3", :"tlsv1.2"],
             verify: :verify_peer,
             cacerts: :public_key.cacerts_get(),
+            customize_hostname_check: [match_fun: :public_key.pkix_verify_hostname_match_fun(:https)],
             depth: depth,
             server_name_indication: server
           ],
@@ -325,6 +326,7 @@ case get_var_from_path_or_env(config_dir, "MAIL_TRANSPORT", "local") do
         versions: [:"tlsv1.3", :"tlsv1.2"],
         verify: :verify_peer,
         cacerts: :public_key.cacerts_get(),
+        customize_hostname_check: [match_fun: :public_key.pkix_verify_hostname_match_fun(:https)],
         depth: depth,
         server_name_indication: server
       ]
