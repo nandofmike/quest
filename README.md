@@ -1,3 +1,5 @@
+[**Português brasileiro — Leia o README em português**](README.pt-BR.md)
+
 <div align="center">
 
 <a href="https://claper.co">
