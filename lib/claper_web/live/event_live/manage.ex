@@ -40,7 +40,15 @@ defmodule ClaperWeb.EventLive.Manage do
 
     posts = list_all_posts(socket, event.uuid)
     pinned_posts = list_pinned_posts(socket, event.uuid)
-    questions = list_all_questions(socket, event.uuid)
+
+    questions =
+      list_all_questions(
+        socket,
+        event.uuid,
+        "date",
+        event.presentation_file.presentation_state.debate_mode
+      )
+
     form_submits = list_form_submits(socket, event.presentation_file.id)
 
     audio_token =
@@ -147,13 +155,22 @@ defmodule ClaperWeb.EventLive.Manage do
   end
 
   @impl true
+  def handle_info({event_end, _event_uuid}, socket)
+      when event_end in [:event_terminated, :event_deleted] do
+    {:noreply,
+     socket
+     |> put_flash(:info, gettext("This event has been terminated"))
+     |> push_navigate(to: ~p"/events")}
+  end
+
+  @impl true
   def handle_info({:post_created, post}, socket) do
     socket =
       socket
       |> stream_insert(:posts, post, at: 0)
       |> update(:post_count, fn post_count -> post_count + 1 end)
 
-    case ClaperWeb.Helpers.body_without_links(post.body) =~ "?" do
+    case question?(socket, post) do
       true ->
         {:noreply,
          socket
@@ -171,12 +188,7 @@ defmodule ClaperWeb.EventLive.Manage do
     {:noreply,
      socket
      |> stream_insert(:posts, updated_post)
-     |> then(fn socket ->
-       sorted_questions =
-         list_all_questions(socket, socket.assigns.event.uuid, socket.assigns.sort_questions_by)
-
-       stream(socket, :questions, sorted_questions, reset: true)
-     end)
+     |> refresh_questions()
      |> then(fn socket ->
        if updated_post.pinned do
          stream_insert(socket, :pinned_posts, updated_post)
@@ -197,7 +209,7 @@ defmodule ClaperWeb.EventLive.Manage do
       end)
       |> update(:post_count, fn post_count -> post_count - 1 end)
 
-    case ClaperWeb.Helpers.body_without_links(deleted_post.body) =~ "?" do
+    case question?(socket, deleted_post) do
       true ->
         {:noreply,
          socket
@@ -395,11 +407,21 @@ defmodule ClaperWeb.EventLive.Manage do
 
   @impl true
   def handle_info({:state_updated, state}, socket) do
-    if state.position != socket.assigns.state.position do
-      {:noreply, socket |> assign(:state, state) |> interactions_at_position(state.position)}
+    debate_mode_changed = state.debate_mode != socket.assigns.state.debate_mode
+    position_changed = state.position != socket.assigns.state.position
+    socket = assign(socket, :state, state)
+    socket = if debate_mode_changed, do: refresh_questions(socket), else: socket
+
+    if position_changed do
+      {:noreply, interactions_at_position(socket, state.position)}
     else
-      {:noreply, socket |> assign(:state, state)}
+      {:noreply, socket}
     end
+  end
+
+  @impl true
+  def handle_info({:presentation_removed, _presentation_file}, socket) do
+    {:noreply, push_navigate(socket, to: ~p"/e/#{socket.assigns.event.code}/manage")}
   end
 
   @impl true
@@ -971,6 +993,23 @@ defmodule ClaperWeb.EventLive.Manage do
       )
 
     {:noreply, socket |> assign(:state, new_state)}
+  end
+
+  @impl true
+  def handle_event(
+        "checked",
+        %{"key" => "debate_mode", "value" => value},
+        %{assigns: %{state: state}} = socket
+      ) do
+    # Leaving debate mode must not throw the private questions onto the screen.
+    attrs =
+      if value in [true, "true"],
+        do: %{debate_mode: true},
+        else: %{debate_mode: false, chat_visible: false}
+
+    {:ok, new_state} = Claper.Presentations.update_presentation_state(state, attrs)
+
+    {:noreply, socket |> assign(:state, new_state) |> refresh_questions()}
   end
 
   @impl true
@@ -1564,7 +1603,7 @@ defmodule ClaperWeb.EventLive.Manage do
     |> Enum.reverse()
   end
 
-  defp list_all_questions(_socket, event_id, sort \\ "date") do
+  defp list_all_questions(socket, event_id, sort \\ "date", debate_mode \\ nil) do
     sort_atom =
       case sort do
         "likes" -> :likes
@@ -1572,10 +1611,34 @@ defmodule ClaperWeb.EventLive.Manage do
       end
 
     questions =
-      Claper.Posts.list_questions(event_id, [:event, :reactions], sort_atom)
-      |> Enum.filter(&(ClaperWeb.Helpers.body_without_links(&1.body) =~ "?"))
+      if if(is_nil(debate_mode), do: debate_mode?(socket), else: debate_mode) do
+        Claper.Posts.list_posts(event_id, [:event, :reactions])
+        |> then(
+          &if(sort_atom == :likes, do: Enum.sort_by(&1, fn p -> -p.like_count end), else: &1)
+        )
+      else
+        Claper.Posts.list_questions(event_id, [:event, :reactions], sort_atom)
+        |> Enum.filter(&(ClaperWeb.Helpers.body_without_links(&1.body) =~ "?"))
+      end
 
     if sort_atom == :date, do: Enum.reverse(questions), else: questions
+  end
+
+  # In debate mode every audience message is a question, with or without "?".
+  defp debate_mode?(%{assigns: %{state: %{debate_mode: true}}}), do: true
+  defp debate_mode?(_socket), do: false
+
+  defp refresh_questions(socket) do
+    questions =
+      list_all_questions(socket, socket.assigns.event.uuid, socket.assigns.sort_questions_by)
+
+    socket
+    |> stream(:questions, questions, reset: true)
+    |> assign(:question_count, length(questions))
+  end
+
+  defp question?(socket, post) do
+    debate_mode?(socket) or ClaperWeb.Helpers.body_without_links(post.body) =~ "?"
   end
 
   defp list_form_submits(_socket, presentation_file_id) do

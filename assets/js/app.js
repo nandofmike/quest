@@ -21,6 +21,7 @@ import { AudioCapture } from "./audio_capture";
 import DateTimeLocal from "./date_time_local.mjs";
 import Split from "split-grid";
 import CustomHooks from "./hooks";
+import { installShortcuts } from "./keyboard_shortcuts.mjs";
 import "./admin-charts.js";
 
 // Get supported locales from backend configuration or fallback to default list
@@ -588,14 +589,11 @@ Hooks.OpenPresenter = {
     );
   },
   mounted() {
-    this.el.addEventListener("click", (e) => this.open(e));
-  },
-  updated() {
-    this.el.removeEventListener("click", (e) => this.open(e));
-    this.el.addEventListener("click", (e) => this.open(e));
+    this.onClick = (e) => this.open(e);
+    this.el.addEventListener("click", this.onClick);
   },
   destroyed() {
-    this.el.removeEventListener("click", (e) => this.open(e));
+    this.el.removeEventListener("click", this.onClick);
   },
 };
 
@@ -1231,3 +1229,5 @@ liveSocket.connect();
 // >> liveSocket.enableLatencySim(1000)  // enabled for duration of browser session
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket;
+
+installShortcuts();

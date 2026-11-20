@@ -1,6 +1,8 @@
 <%= if @started || @is_leader do %>
+  <% attendee_slide_url =
+    if @state.debate_mode && !@is_leader, do: nil, else: @current_slide_url %>
   <% focus_content? =
-    not is_nil(@current_slide_url) ||
+    not is_nil(attendee_slide_url) ||
       match?(%Claper.Polls.Poll{}, @current_interaction) ||
       match?(%Claper.Forms.Form{}, @current_interaction) ||
       match?(%Claper.Quizzes.Quiz{}, @current_interaction) ||
@@ -223,7 +225,7 @@
           <% _ -> %>
             <div id="focus-media" class="relative h-full w-full bg-black">
               <img
-                src={@current_slide_url}
+                src={attendee_slide_url}
                 alt={gettext("Current presentation slide")}
                 class="h-full w-full object-contain"
               />
@@ -380,7 +382,7 @@
             current_user={@current_user}
             attendee_identifier={@attendee_identifier}
             event={@event}
-            reaction_enabled={@state.message_reaction_enabled}
+            reaction_enabled={@state.message_reaction_enabled && !@state.debate_mode}
             liked_posts={@like_posts}
             loved_posts={@love_posts}
             loled_posts={@lol_posts}
@@ -391,7 +393,9 @@
           :if={@post_count == 0 && @state.chat_enabled}
           class="pointer-events-none absolute inset-0 flex items-center justify-center px-8 text-center text-sm text-gray-500"
         >
-          {gettext("Be the first to ask a question or share a thought.")}
+          {if @state.debate_mode,
+            do: gettext("Send your question. Only the moderators will see it."),
+            else: gettext("Be the first to ask a question or share a thought.")}
         </div>
 
         <button
@@ -412,7 +416,7 @@
         </div>
 
         <div
-          :if={@state.message_reaction_enabled}
+          :if={@state.message_reaction_enabled && !@state.debate_mode}
           id="room-reaction-fab"
           phx-hook="RoomReactionFab"
           class="absolute bottom-20 left-4 z-20 flex w-14 flex-col items-center gap-2"

@@ -17,7 +17,16 @@
   data-current-page={@state.position}
   data-embed-active={if @current_embed, do: "true", else: "false"}
 >
-  <!-- JOIN SCREEN -->
+  <div
+    :if={@ended}
+    id="event-ended"
+    class="absolute inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-black text-white"
+  >
+    <img src="/images/logo-large.svg" class="h-20" alt="BSB LED" />
+    <p class="text-3xl font-bold">{gettext("This event has been terminated")}</p>
+  </div>
+  
+<!-- JOIN SCREEN -->
   <div
     id="joinScreen"
     class={"#{if @state.join_screen_visible, do: "opacity-100 z-40", else: "opacity-0 pointer-events-none"} h-full w-full flex flex-col justify-center bg-black absolute transition-opacity"}
@@ -124,13 +133,13 @@
   <!-- MESSAGES -->
   <div
     id="slider-wrapper"
-    class={"w-full min-h-screen grid #{if (@state.chat_visible && (@event.presentation_file.length || 0) > 0) || (@current_embed && (@event.presentation_file.length || 0) == 0), do: "grid-cols-[1fr_10px_1fr]", else: "grid-cols-[1fr]"} items-center justify-center relative bg-black"}
+    class={"w-full min-h-screen grid #{if (@state.chat_visible && !@state.debate_mode && (@event.presentation_file.length || 0) > 0) || (@current_embed && (@event.presentation_file.length || 0) == 0), do: "grid-cols-[1fr_10px_1fr]", else: "grid-cols-[1fr]"} items-center justify-center relative bg-black"}
     phx-hook="Split"
     data-type="column"
     data-gutter=".gutter-1"
   >
     <div
-      :if={@state.chat_visible}
+      :if={@state.chat_visible && !@state.debate_mode}
       class="px-5 transition-all duration-150 flex flex-col h-screen py-5 justify-end max-h-screen bg-black"
       id="post-list-wrapper"
       phx-update="replace"
@@ -244,7 +253,7 @@
       <% end %>
     </div>
     <div
-      class={"gutter-1 row-span-full cursor-col-resize col-2 text-center text-sm leading-3 text-white #{if (!@state.chat_visible && (@event.presentation_file.length || 0) > 0) || (!@current_embed && (@event.presentation_file.length || 0) == 0), do: "hidden"}"}
+      class={"gutter-1 row-span-full cursor-col-resize col-2 text-center text-sm leading-3 text-white #{if ((!@state.chat_visible || @state.debate_mode) && (@event.presentation_file.length || 0) > 0) || (!@current_embed && (@event.presentation_file.length || 0) == 0), do: "hidden"}"}
       style="writing-mode: vertical-rl"
     >
       •••

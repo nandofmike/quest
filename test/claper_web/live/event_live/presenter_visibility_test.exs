@@ -31,10 +31,10 @@ defmodule ClaperWeb.EventLive.PresenterVisibilityTest do
     word_cloud_entry_fixture(%{word_cloud: cloud, content: "Elixir"})
     {:ok, manager, _html} = live(conn, ~p"/e/#{event.code}/manage")
     {:ok, presenter, _html} = live(conn, ~p"/e/#{event.code}/presenter")
-    toggle = ~s(#settings-modal-content button[phx-value-key="poll_visible"][phx-key="Z"])
+    toggle = ~s(#settings-modal-content button[phx-value-key="poll_visible"][data-shortcut="Z"])
 
     assert has_element?(manager, toggle <> ~s([aria-checked="false"]))
-    manager |> element(toggle) |> render_keydown()
+    manager |> element(toggle) |> render_click()
     assert presentation_state(presentation_file).poll_visible
 
     {:ok, _} =
@@ -45,7 +45,7 @@ defmodule ClaperWeb.EventLive.PresenterVisibilityTest do
     assert has_element?(presenter, "#word-cloud h2", cloud.title)
     assert has_element?(manager, toggle <> ~s([aria-checked="true"]))
 
-    manager |> element(toggle) |> render_keydown()
+    manager |> element(toggle) |> render_click()
     refute presentation_state(presentation_file).poll_visible
     assert WordClouds.get_word_cloud!(cloud.id).show_results
 
@@ -74,14 +74,14 @@ defmodule ClaperWeb.EventLive.PresenterVisibilityTest do
     {:ok, manager, _html} = live(conn, ~p"/e/#{event.code}/manage")
     {:ok, presenter, _html} = live(conn, ~p"/e/#{event.code}/presenter")
     {:ok, attendee, _html} = live(build_conn(), ~p"/e/#{event.code}")
-    toggle = ~s(#settings-modal-content button[phx-value-key="poll_visible"][phx-key="Z"])
+    toggle = ~s(#settings-modal-content button[phx-value-key="poll_visible"][data-shortcut="Z"])
 
     assert word_cloud_names(render(attendee)) == ["Elixir"]
-    manager |> element(toggle) |> render_keydown()
+    manager |> element(toggle) |> render_click()
     assert presentation_state(presentation_file).poll_visible
     assert presenter_words(presenter, cloud) == ["Elixir"]
 
-    manager |> element(toggle) |> render_keydown()
+    manager |> element(toggle) |> render_click()
     refute presentation_state(presentation_file).poll_visible
     attendee |> form(~s(form[phx-submit="submit-word"]), %{word: "Phoenix"}) |> render_submit()
     assert word_cloud_names(render(attendee)) == ["Elixir", "Phoenix"]
@@ -89,7 +89,7 @@ defmodule ClaperWeb.EventLive.PresenterVisibilityTest do
     send(presenter.pid, {:current_interaction, cloud})
     refute presentation_state(presentation_file).poll_visible
 
-    manager |> element(toggle) |> render_keydown()
+    manager |> element(toggle) |> render_click()
     assert presenter_words(presenter, cloud) == ["Elixir", "Phoenix"]
     refute render(presenter) =~ "Hiddenword"
 

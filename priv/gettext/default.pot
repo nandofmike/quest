@@ -12,6 +12,7 @@ msgstr ""
 
 #: lib/claper_web/live/admin_live/settings_live.ex
 #: lib/claper_web/live/admin_live/settings_live.html.heex
+#: lib/claper_web/live/event_live/manage.html.heex
 #: lib/claper_web/live/user_settings_live/show.ex
 #: lib/claper_web/templates/layout/admin_app.html.heex
 #, elixir-autogen, elixir-format
@@ -583,6 +584,7 @@ msgid "Text"
 msgstr ""
 
 #: lib/claper_web/live/event_live/manage_audience_responses_component.ex
+#: lib/claper_web/live/event_live/manageable_post_component.ex
 #, elixir-autogen, elixir-format
 msgid "This cannot be undone, confirm ?"
 msgstr ""
@@ -863,6 +865,8 @@ msgstr ""
 msgid "Return to your last event"
 msgstr ""
 
+#: lib/claper_web/live/event_live/manage.ex
+#: lib/claper_web/live/event_live/presenter.html.heex
 #: lib/claper_web/live/event_live/show.ex
 #, elixir-autogen, elixir-format
 msgid "This event has been terminated"
@@ -4096,4 +4100,39 @@ msgstr ""
 #: lib/claper_web/templates/user_oidc/confirm.html.heex
 #, elixir-autogen, elixir-format
 msgid "This links your %{provider} sign-in to your Quest account."
+msgstr ""
+
+#: lib/claper_web/live/event_live/manage_attendees_options_component.ex
+#, elixir-autogen, elixir-format
+msgid "Disable debate mode (private questions)"
+msgstr ""
+
+#: lib/claper_web/live/event_live/manage_attendees_options_component.ex
+#, elixir-autogen, elixir-format
+msgid "Enable debate mode (private questions)"
+msgstr ""
+
+#: lib/claper_web/live/event_live/show.ex
+#, elixir-autogen, elixir-format
+msgid "Question sent. Only the moderators will see it."
+msgstr ""
+
+#: lib/claper_web/live/event_live/event_form_component.html.heex
+#, elixir-autogen, elixir-format
+msgid "Remove presentation"
+msgstr ""
+
+#: lib/claper_web/live/event_live/event_form_component.html.heex
+#, elixir-autogen, elixir-format
+msgid "Remove this presentation? Its slides will be deleted from the server."
+msgstr ""
+
+#: lib/claper_web/live/event_live/show.html.heex
+#, elixir-autogen, elixir-format
+msgid "Send your question. Only the moderators will see it."
+msgstr ""
+
+#: lib/claper_web/live/event_live/manage_attendees_options_component.ex
+#, elixir-autogen, elixir-format
+msgid "Turn off debate mode? Every attendee will see all questions sent so far. Messages will be hidden from the screen."
 msgstr ""

@@ -140,8 +140,7 @@ defmodule ClaperWeb.Component.Input do
       class="group relative inline-flex h-5 w-10 shrink-0 cursor-pointer items-center justify-center rounded-full"
       role="switch"
       aria-checked="false"
-      phx-key={@shortcut}
-      phx-window-keydown={if @shortcut && not @disabled, do: checked(@checked, @key)}
+      data-shortcut={@shortcut}
     >
       <span class="pointer-events-none absolute h-full w-full rounded-md bg-white" aria-hidden="true">
       </span>
@@ -175,8 +174,7 @@ defmodule ClaperWeb.Component.Input do
       class={"py-2 px-2 rounded-sm #{if @checked, do: "bg-primary-500 hover:bg-primary-600 text-white", else: "bg-gray-200 hover:bg-gray-300 text-gray-600"} flex justify-between items-center w-full gap-x-2 disabled:opacity-50 disabled:cursor-not-allowed transition ease-in-out duration-300"}
       role="switch"
       aria-checked="false"
-      phx-key={@shortcut}
-      phx-window-keydown={if @shortcut && not @disabled, do: checked(@checked, @key)}
+      data-shortcut={@shortcut}
     >
       {render_slot(@inner_block)}
     </button>

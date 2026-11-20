@@ -200,6 +200,20 @@
 
             <.live_file_input upload={@uploads.presentation_file} class="sr-only" />
 
+            <button
+              :if={presentation_attached && is_nil(upload_entry)}
+              id="remove-presentation"
+              type="button"
+              phx-click="remove-presentation"
+              phx-target={@myself}
+              data-confirm={
+                gettext("Remove this presentation? Its slides will be deleted from the server.")
+              }
+              class="btn btn-ghost btn-sm mt-2 text-error"
+            >
+              {gettext("Remove presentation")}
+            </button>
+
             <%= if upload_entry do %>
               <%= for err <- upload_errors(@uploads.presentation_file, upload_entry) do %>
                 <div class="alert alert-error mt-3 py-2 text-sm" role="alert">

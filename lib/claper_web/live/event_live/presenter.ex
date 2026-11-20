@@ -56,6 +56,7 @@ defmodule ClaperWeb.EventLive.Presenter do
           host
         )
         |> assign(:event, event)
+        |> assign(:ended, false)
         |> assign(:iframe, !is_nil(params["iframe"]))
         |> assign(:state, event.presentation_file.presentation_state)
         |> assign(:posts, list_posts(socket, event.uuid))
@@ -446,6 +447,17 @@ defmodule ClaperWeb.EventLive.Presenter do
   @impl true
   def handle_info({:transcription_config_deleted, _config}, socket) do
     {:noreply, socket |> assign(:transcription_config, nil)}
+  end
+
+  @impl true
+  def handle_info({:presentation_removed, _presentation_file}, socket) do
+    {:noreply, push_navigate(socket, to: ~p"/e/#{socket.assigns.event.code}/presenter")}
+  end
+
+  @impl true
+  def handle_info({event_end, _event_uuid}, socket)
+      when event_end in [:event_terminated, :event_deleted] do
+    {:noreply, assign(socket, :ended, true)}
   end
 
   @impl true

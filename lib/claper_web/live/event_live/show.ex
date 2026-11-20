@@ -102,8 +102,6 @@ defmodule ClaperWeb.EventLive.Show do
 
     post_changeset = Posts.Post.changeset(%Posts.Post{}, %{})
 
-    posts = list_posts(socket, event.uuid)
-
     slide_urls = Presentations.get_slide_urls(event.presentation_file)
     current_position = event.presentation_file.presentation_state.position
 
@@ -127,12 +125,11 @@ defmodule ClaperWeb.EventLive.Show do
         Transcriptions.get_transcription_config(event.presentation_file.id)
       )
       |> assign(:nickname, "")
-      |> stream(:posts, posts)
-      |> assign(:post_count, Enum.count(posts))
       |> starting_soon_assigns(event)
       |> get_current_interaction(event, current_position)
       |> check_leader(event)
       |> leader_list(event)
+      |> stream_visible_posts()
 
     {:ok, socket}
   end
@@ -220,10 +217,14 @@ defmodule ClaperWeb.EventLive.Show do
 
   @impl true
   def handle_info({:post_created, post}, socket) do
-    {:noreply,
-     socket
-     |> stream_insert(:posts, post)
-     |> update(:post_count, fn count -> count + 1 end)}
+    if visible_post?(socket, post) do
+      {:noreply,
+       socket
+       |> stream_insert(:posts, post)
+       |> update(:post_count, fn count -> count + 1 end)}
+    else
+      {:noreply, socket}
+    end
   end
 
   @impl true
@@ -234,14 +235,17 @@ defmodule ClaperWeb.EventLive.Show do
       socket.assigns.state.message_reaction_enabled !=
         presentation_state.message_reaction_enabled
 
+    debate_mode_changed =
+      socket.assigns.state.debate_mode != presentation_state.debate_mode
+
     socket =
       socket
       |> assign(:state, presentation_state)
       |> assign_current_slide(presentation_state.position)
 
     socket =
-      if message_reactions_changed do
-        stream(socket, :posts, list_posts(socket, socket.assigns.event.uuid), reset: true)
+      if message_reactions_changed or debate_mode_changed do
+        stream_visible_posts(socket)
       else
         socket
       end
@@ -309,35 +313,47 @@ defmodule ClaperWeb.EventLive.Show do
 
   @impl true
   def handle_info({:post_updated, post}, socket) do
-    {:noreply, socket |> stream_insert(:posts, post)}
+    {:noreply, maybe_stream_post(socket, post)}
   end
 
   @impl true
   def handle_info({:post_pinned, post}, socket) do
-    {:noreply, socket |> stream_insert(:posts, post)}
+    {:noreply, maybe_stream_post(socket, post)}
   end
 
   @impl true
   def handle_info({:post_unpinned, post}, socket) do
-    {:noreply, socket |> stream_insert(:posts, post)}
+    {:noreply, maybe_stream_post(socket, post)}
   end
 
   @impl true
   def handle_info({:reaction_added, post}, socket) do
-    {:noreply, socket |> stream_insert(:posts, post)}
+    {:noreply, maybe_stream_post(socket, post)}
   end
 
   @impl true
   def handle_info({:reaction_removed, post}, socket) do
-    {:noreply, socket |> stream_insert(:posts, post)}
+    {:noreply, maybe_stream_post(socket, post)}
   end
 
   @impl true
   def handle_info({:post_deleted, post}, socket) do
+    if visible_post?(socket, post) do
+      {:noreply,
+       socket
+       |> stream_delete(:posts, post)
+       |> update(:post_count, fn count -> count - 1 end)}
+    else
+      {:noreply, socket}
+    end
+  end
+
+  @impl true
+  def handle_info({:event_deleted, _event_uuid}, socket) do
     {:noreply,
      socket
-     |> stream_delete(:posts, post)
-     |> update(:post_count, fn count -> count - 1 end)}
+     |> put_flash(:error, gettext("This event has been terminated"))
+     |> push_navigate(to: ~p"/")}
   end
 
   @impl true
@@ -491,6 +507,12 @@ defmodule ClaperWeb.EventLive.Show do
   end
 
   @impl true
+  def handle_event(event, _params, %{assigns: %{state: %{debate_mode: true}}} = socket)
+      when event in ["react", "unreact", "global-react"] do
+    {:noreply, socket}
+  end
+
+  @impl true
   def handle_event("save", %{"post" => post_params}, socket) do
     if is_map(post_params) &&
          Enum.any?(@protected_post_fields, &Map.has_key?(post_params, &1)) do
@@ -501,10 +523,18 @@ defmodule ClaperWeb.EventLive.Show do
       {:ok, post} ->
         SecurityAudit.observe(socket, "message", post.id, "submission_burst", 20)
 
-        {:noreply,
-         socket
-         |> assign(:post_changeset, Posts.Post.changeset(%Posts.Post{}, %{}))
-         |> push_event("post-saved", %{})}
+        socket =
+          socket
+          |> assign(:post_changeset, Posts.Post.changeset(%Posts.Post{}, %{}))
+          |> push_event("post-saved", %{})
+
+        socket =
+          if debate_mode?(socket),
+            do:
+              put_flash(socket, :info, gettext("Question sent. Only the moderators will see it.")),
+            else: socket
+
+        {:noreply, socket}
 
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply, assign(socket, post_changeset: changeset)}
@@ -964,6 +994,30 @@ defmodule ClaperWeb.EventLive.Show do
        do: true
 
   defp own_post?(_socket, _post), do: false
+
+  # In debate mode the audience only sends questions: each participant sees
+  # their own, and only the event team sees everyone's.
+  defp debate_mode?(%{assigns: %{state: %{debate_mode: true}}}), do: true
+  defp debate_mode?(_socket), do: false
+
+  defp visible_post?(socket, post) do
+    not debate_mode?(socket) or socket.assigns[:is_leader] == true or own_post?(socket, post)
+  end
+
+  defp maybe_stream_post(socket, post) do
+    if visible_post?(socket, post), do: stream_insert(socket, :posts, post), else: socket
+  end
+
+  defp stream_visible_posts(socket) do
+    posts =
+      socket
+      |> list_posts(socket.assigns.event.uuid)
+      |> Enum.filter(&visible_post?(socket, &1))
+
+    socket
+    |> stream(:posts, posts, reset: true)
+    |> assign(:post_count, Enum.count(posts))
+  end
 
   defp list_posts(_socket, event_id) do
     Posts.list_posts(event_id, [:event, :reactions, :user])

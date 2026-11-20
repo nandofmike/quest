@@ -38,12 +38,12 @@ defmodule ClaperWeb.EventLive.ManageablePostComponent do
     <!-- Actions (visible on hover) -->
           <div
             :if={!@readonly}
-            class="relative z-20 ml-auto flex items-center divide-x divide-gray-200 border border-gray-200 rounded-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity shrink-0"
+            class="relative z-20 ml-auto flex items-center divide-x divide-gray-200 border border-gray-200 rounded-lg opacity-100 [@media(hover:hover)]:opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity shrink-0"
           >
             <div class="tooltip tooltip-bottom" data-tip={gettext("Reply")}>
               <button
                 type="button"
-                class="flex items-center justify-center w-8 h-6"
+                class="flex items-center justify-center w-10 h-9"
                 aria-label={gettext("Reply")}
                 aria-controls={"reply-form-#{@post.uuid}"}
                 phx-click={
@@ -74,7 +74,7 @@ defmodule ClaperWeb.EventLive.ManageablePostComponent do
               data-tip={if @post.pinned, do: gettext("Unpin"), else: gettext("Pin")}
             >
               <button
-                class="flex items-center justify-center w-8 h-6"
+                class="flex items-center justify-center w-10 h-9"
                 phx-click="pin"
                 phx-value-id={@post.uuid}
                 phx-value-event_id={@event.uuid}
@@ -101,7 +101,7 @@ defmodule ClaperWeb.EventLive.ManageablePostComponent do
             <%= if @post.attendee_identifier do %>
               <div class="tooltip tooltip-bottom" data-tip={gettext("Ban")}>
                 <button
-                  class="flex items-center justify-center w-8 h-6"
+                  class="flex items-center justify-center w-10 h-9"
                   phx-click="ban"
                   phx-value-attendee_identifier={@post.attendee_identifier}
                   data-confirm={
@@ -131,7 +131,7 @@ defmodule ClaperWeb.EventLive.ManageablePostComponent do
             <% else %>
               <div class="tooltip tooltip-bottom" data-tip={gettext("Ban")}>
                 <button
-                  class="flex items-center justify-center w-8 h-6"
+                  class="flex items-center justify-center w-10 h-9"
                   phx-click="ban"
                   phx-value-user_id={@post.user_id}
                   data-confirm={
@@ -161,8 +161,10 @@ defmodule ClaperWeb.EventLive.ManageablePostComponent do
             <% end %>
             <div class="tooltip tooltip-bottom" data-tip={gettext("Delete")}>
               <button
-                class="flex items-center justify-center w-8 h-6"
+                class="flex items-center justify-center w-10 h-9"
                 phx-click="delete"
+                aria-label={gettext("Delete")}
+                data-confirm={gettext("This cannot be undone, confirm ?")}
                 phx-value-id={@post.uuid}
                 phx-value-event_id={@event.uuid}
               >

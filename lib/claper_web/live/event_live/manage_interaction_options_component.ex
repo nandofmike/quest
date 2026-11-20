@@ -287,10 +287,7 @@ defmodule ClaperWeb.EventLive.ManageInteractionOptionsComponent do
           role="switch"
           aria-checked={to_string(@checked)}
           aria-label={@label}
-          phx-key={@shortcut}
-          phx-window-keydown={
-            if @shortcut && not @disabled, do: ClaperWeb.Component.Input.checked(@checked, @key)
-          }
+          data-shortcut={@shortcut}
         >
           <span class={"pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out #{if @checked, do: "translate-x-5", else: "translate-x-0"}"}>
           </span>

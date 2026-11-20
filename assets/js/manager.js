@@ -1,3 +1,4 @@
+import { isEditableTarget } from "./keyboard_shortcuts.mjs";
 import { tns } from "tiny-slider";
 
 export class Manager {
@@ -32,7 +33,7 @@ export class Manager {
     });
 
     window.addEventListener("keydown", (e) => {
-      if ((e.target.tagName || "").toLowerCase() != "input") {
+      if (!isEditableTarget(e.target)) {
 
         switch (e.key) {
           case "ArrowLeft":

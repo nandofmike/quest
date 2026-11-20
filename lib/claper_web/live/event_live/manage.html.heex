@@ -476,7 +476,8 @@
         id={"openPresenter-#{@event.uuid}"}
         data-url={~p"/e/#{@event.code}/presenter"}
         type="button"
-        class="hidden lg:inline-flex btn btn-gradient"
+        class="inline-flex btn btn-gradient"
+        aria-label={gettext("Open presentation")}
       >
         <!-- Play icon -->
         <svg
@@ -491,7 +492,7 @@
             clip-rule="evenodd"
           />
         </svg>
-        {gettext("Open presentation")}
+        <span class="hidden sm:inline">{gettext("Open presentation")}</span>
       </button>
       <a href={~p"/e/#{@event.code}"} target="_blank" class="hidden sm:flex btn btn-tertiary">
         <!-- User icon -->
@@ -540,7 +541,8 @@
       <!-- Mobile settings button -->
       <button
         phx-click="toggle-settings-modal"
-        class="lg:hidden p-2 rounded-full hover:bg-gray-100"
+        class="xl:hidden p-2 rounded-full hover:bg-gray-100"
+        aria-label={gettext("Settings")}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

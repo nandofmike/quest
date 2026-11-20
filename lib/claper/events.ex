@@ -1051,6 +1051,7 @@ defmodule Claper.Events do
 
     with {:ok, event} <- Repo.transaction(fn -> purge_event(event) end) do
       clear_presentation_storage(event.presentation_file)
+      broadcast_event(event.uuid, {:event_deleted, event.uuid})
       broadcast_user_events(event.user_id, {:deleted, event})
 
       for leader <- leaders do

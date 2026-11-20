@@ -30,6 +30,7 @@ defmodule Claper.Presentations.PresentationState do
     field :banned, {:array, :string}, default: []
     field :show_only_pinned, :boolean, default: false
     field :show_attendee_count, :boolean, default: true
+    field :debate_mode, :boolean, default: false
 
     belongs_to :presentation_file, Claper.Presentations.PresentationFile
 
@@ -50,7 +51,8 @@ defmodule Claper.Presentations.PresentationState do
       :anonymous_chat_enabled,
       :show_only_pinned,
       :show_attendee_count,
-      :message_reaction_enabled
+      :message_reaction_enabled,
+      :debate_mode
     ])
     |> validate_required([])
   end

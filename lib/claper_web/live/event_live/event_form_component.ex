@@ -43,6 +43,26 @@ defmodule ClaperWeb.EventLive.EventFormComponent do
   end
 
   @impl true
+  def handle_event(
+        "remove-presentation",
+        _params,
+        %{assigns: %{action: :edit, event: %{presentation_file: %PresentationFile{id: id}}}} =
+          socket
+      )
+      when not is_nil(id) do
+    case Claper.Presentations.remove_presentation(socket.assigns.event.presentation_file) do
+      {:ok, presentation_file} ->
+        event = %{socket.assigns.event | presentation_file: presentation_file}
+        {:noreply, assign(socket, :event, event)}
+
+      {:error, _changeset} ->
+        {:noreply, socket}
+    end
+  end
+
+  def handle_event("remove-presentation", _params, socket), do: {:noreply, socket}
+
+  @impl true
   def handle_event("remove-file", %{"ref" => ref}, socket) do
     {:noreply, cancel_upload(socket, :presentation_file, ref)}
   end

@@ -87,6 +87,38 @@ defmodule ClaperWeb.EventLive.ManageAttendeesOptionsComponent do
         </.toggle_row>
         <.toggle_row
           label={
+            if @state.debate_mode,
+              do: gettext("Disable debate mode (private questions)"),
+              else: gettext("Enable debate mode (private questions)")
+          }
+          checked={@state.debate_mode}
+          key={:debate_mode}
+          show_shortcut={false}
+          confirm={
+            if @state.debate_mode,
+              do:
+                gettext(
+                  "Turn off debate mode? Every attendee will see all questions sent so far. Messages will be hidden from the screen."
+                )
+          }
+        >
+          <:icon>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </:icon>
+        </.toggle_row>
+        <.toggle_row
+          label={
             if @state.message_reaction_enabled,
               do: gettext("Disable reactions"),
               else: gettext("Enable reactions")
@@ -118,6 +150,7 @@ defmodule ClaperWeb.EventLive.ManageAttendeesOptionsComponent do
   attr :shortcut, :string, default: nil
   attr :disabled, :boolean, default: false
   attr :show_shortcut, :boolean, default: true
+  attr :confirm, :string, default: nil
   slot :icon, required: true
 
   defp toggle_row(assigns) do
@@ -146,15 +179,13 @@ defmodule ClaperWeb.EventLive.ManageAttendeesOptionsComponent do
         <button
           phx-click={ClaperWeb.Component.Input.checked(@checked, @key)}
           disabled={@disabled}
+          data-confirm={@confirm}
           phx-value-key={@key}
           type="button"
           class={"relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none disabled:cursor-not-allowed #{if @checked, do: "bg-primary-500", else: "bg-gray-200"}"}
           role="switch"
           aria-checked={@checked}
-          phx-key={@shortcut}
-          phx-window-keydown={
-            if @shortcut && not @disabled, do: ClaperWeb.Component.Input.checked(@checked, @key)
-          }
+          data-shortcut={@shortcut}
         >
           <span class={"pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out #{if @checked, do: "translate-x-5", else: "translate-x-0"}"}>
           </span>

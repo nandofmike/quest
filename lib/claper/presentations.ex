@@ -215,6 +215,38 @@ defmodule Claper.Presentations do
     |> Repo.update()
   end
 
+  @doc """
+  Detaches the slides from a presentation file and removes the stored files
+  when no other presentation (for example a duplicated event) still uses them.
+  """
+  def remove_presentation(%PresentationFile{} = presentation_file) do
+    old_hash = presentation_file.hash
+
+    with {:ok, presentation_file} <-
+           update_presentation_file(presentation_file, %{hash: nil, length: 0, slide_order: nil}) do
+      if is_binary(old_hash) and get_presentation_files_by_hash(old_hash) == [] do
+        Task.Supervisor.start_child(Claper.TaskSupervisor, fn ->
+          Claper.Tasks.Converter.clear(old_hash)
+        end)
+      end
+
+      case Repo.get_by(Claper.Presentations.PresentationState,
+             presentation_file_id: presentation_file.id
+           ) do
+        nil -> :ok
+        state -> update_presentation_state(state, %{position: 0})
+      end
+
+      Phoenix.PubSub.broadcast(
+        Claper.PubSub,
+        "presentation:#{presentation_file.id}",
+        {:presentation_removed, presentation_file}
+      )
+
+      {:ok, presentation_file}
+    end
+  end
+
   def subscribe(presentation_file_id) do
     Phoenix.PubSub.subscribe(Claper.PubSub, "presentation:#{presentation_file_id}")
   end

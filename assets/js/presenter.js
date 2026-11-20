@@ -1,3 +1,4 @@
+import { isEditableTarget } from "./keyboard_shortcuts.mjs";
 import { tns } from "tiny-slider";
 
 export class Presenter {
@@ -108,7 +109,7 @@ export class Presenter {
     });
 
     window.addEventListener("keyup", (e) => {
-      if (e.target.tagName.toLowerCase() != "input") {
+      if (!isEditableTarget(e.target)) {
 
         switch (e.key) {
           case "f": // F
@@ -118,16 +119,12 @@ export class Presenter {
           case "ArrowLeft":
           case "PageUp":
             e.preventDefault();
-            window.opener.dispatchEvent(
-              new KeyboardEvent("keydown", { key: "ArrowLeft" })
-            );
+            this.sendToManager("ArrowLeft");
             break;
           case "ArrowRight":
           case "PageDown":
             e.preventDefault();
-            window.opener.dispatchEvent(
-              new KeyboardEvent("keydown", { key: "ArrowRight" })
-            );
+            this.sendToManager("ArrowRight");
             break;
         }
       }
@@ -172,6 +169,15 @@ export class Presenter {
       this.slider.goTo(newPage);
     }
     // Otherwise: unrelated DOM update (e.g. transcription text) — do nothing
+  }
+
+  // Slide changes are driven by the manager window that opened this screen.
+  // When the screen was opened directly (typed URL, another computer) there is
+  // no manager window, so the key is ignored instead of throwing.
+  sendToManager(key) {
+    if (!window.opener || window.opener.closed) return;
+
+    window.opener.dispatchEvent(new KeyboardEvent("keydown", { key }));
   }
 
   fullscreen() {
