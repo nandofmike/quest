@@ -22,6 +22,7 @@ import DateTimeLocal from "./date_time_local.mjs";
 import Split from "split-grid";
 import CustomHooks from "./hooks";
 import { installShortcuts } from "./keyboard_shortcuts.mjs";
+import { joinQrSize } from "./join_qr_size.mjs";
 import "./admin-charts.js";
 
 // Get supported locales from backend configuration or fallback to default list
@@ -948,12 +949,15 @@ Hooks.QRCode = {
         this.el.dataset.code
       : window.location.href;
     var size = this.el.dataset.dynamic
-      ? document.documentElement.clientWidth * 0.25
+      ? joinQrSize(
+          document.documentElement.clientWidth,
+          document.documentElement.clientHeight,
+        )
       : parseInt(this.el.dataset.size || "240", 10);
 
     if (this.el.dataset.dynamic) {
-      this.el.style.width = document.documentElement.clientWidth * 0.27 + "px";
-      this.el.style.height = document.documentElement.clientWidth * 0.27 + "px";
+      this.el.style.width = size + "px";
+      this.el.style.height = size + "px";
     }
 
     if (this.qrCode == null) {

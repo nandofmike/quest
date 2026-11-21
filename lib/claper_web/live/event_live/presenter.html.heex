@@ -31,8 +31,12 @@
     id="joinScreen"
     class={"#{if @state.join_screen_visible, do: "opacity-100 z-40", else: "opacity-0 pointer-events-none"} h-full w-full flex flex-col justify-center bg-black absolute transition-opacity"}
   >
-    <div class="h-full bg-white text-black text-center flex flex-col items-center justify-center">
-      <span class="font-semibold mb-10 sm:text-3xl md:text-4xl lg:text-6xl">
+    <%!-- Sizes follow the window (vh/vw) so the whole screen fits on any display. --%>
+    <div
+      id="join-instructions"
+      class="h-full overflow-hidden bg-white text-black text-center flex flex-col items-center justify-center gap-[3vh] px-[4vw] py-[4vh]"
+    >
+      <span class="font-semibold leading-tight text-[length:min(5vh,3.5vw)]">
         {gettext("Scan to interact in real-time")}
       </span>
       <div
@@ -41,13 +45,13 @@
         data-dynamic="true"
         id="qr"
         phx-update="ignore"
-        class="rounded-lg mx-auto flex items-center justify-center mb-14"
+        class="rounded-lg mx-auto flex shrink-0 items-center justify-center"
       >
       </div>
-      <span class="font-semibold mb-10 sm:text-3xl md:text-4xl lg:text-6xl">
+      <span class="font-semibold leading-tight text-[length:min(4.5vh,3vw)]">
         {gettext("Or go to %{url} and use the code:", url: @host)}
       </span>
-      <span class="font-semibold mb-10 sm:text-5xl md:text-6xl lg:text-8xl">
+      <span class="font-semibold leading-none text-[length:min(9vh,6vw)]">
         #{String.upcase(@event.code)}
       </span>
     </div>
