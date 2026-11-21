@@ -632,6 +632,7 @@ msgid "Messages deactivated"
 msgstr "Ziņojumi atspējoti"
 
 #: lib/claper_web/live/event_live/manageable_post_component.ex
+#: lib/claper_web/live/event_live/moderate.html.heex
 #: lib/claper_web/live/event_live/post_component.ex
 #: lib/claper_web/live/event_live/show.html.heex
 #, elixir-autogen, elixir-format
@@ -868,6 +869,7 @@ msgid "Return to your last event"
 msgstr "Atgriezties pie pēdējā notikuma"
 
 #: lib/claper_web/live/event_live/manage.ex
+#: lib/claper_web/live/event_live/moderate.ex
 #: lib/claper_web/live/event_live/presenter.html.heex
 #: lib/claper_web/live/event_live/show.ex
 #, elixir-autogen, elixir-format
@@ -881,6 +883,7 @@ msgstr "Izveidojiet nākamo prezentāciju, izmantojot"
 
 #: lib/claper_web/live/event_live/index.ex
 #: lib/claper_web/live/event_live/manage.ex
+#: lib/claper_web/live/event_live/moderate.ex
 #: lib/claper_web/live/event_live/presenter.ex
 #: lib/claper_web/live/event_live/show.ex
 #, elixir-autogen, elixir-format
@@ -4143,4 +4146,140 @@ msgstr ""
 #: lib/claper_web/live/event_live/manage_attendees_options_component.ex
 #, elixir-autogen, elixir-format
 msgid "Turn off debate mode? Every attendee will see all questions sent so far. Messages will be hidden from the screen."
+msgstr ""
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Back to new"
+msgstr "Atpakaļ pie pasākumiem"
+
+#: lib/claper_web/live/event_live/moderate.html.heex
+#, elixir-autogen, elixir-format
+msgid "Back to the event manager"
+msgstr ""
+
+#: lib/claper_web/live/event_live/moderate.html.heex
+#, elixir-autogen, elixir-format
+msgid "Close questions? The audience will no longer be able to send questions."
+msgstr ""
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Could not update the question"
+msgstr "Neizdevās dzēst transkripciju"
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format
+msgid "Discard"
+msgstr ""
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format
+msgid "Discarded"
+msgstr ""
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format
+msgid "Discarded questions will appear here."
+msgstr ""
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Mark as read"
+msgstr "Atzīmēt kā pareizo atbildi"
+
+#: lib/claper_web/live/event_live/manage.html.heex
+#, elixir-autogen, elixir-format
+msgid "Moderate"
+msgstr ""
+
+#: lib/claper_web/live/event_live/manage.html.heex
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format
+msgid "Moderate questions"
+msgstr ""
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format
+msgid "New"
+msgstr ""
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format
+msgid "New questions from the audience will appear here."
+msgstr ""
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Question discarded."
+msgstr "Jautājumi"
+
+#: lib/claper_web/live/event_live/moderate.html.heex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Question lists"
+msgstr "Jautājumi"
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format
+msgid "Question marked as read."
+msgstr ""
+
+#: lib/claper_web/live/event_live/moderate.html.heex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Questions closed"
+msgstr "Jautājumi"
+
+#: lib/claper_web/live/event_live/moderate.html.heex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Questions open"
+msgstr "Jautājumi"
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Questions read on stage will appear here."
+msgstr "Jautājumi būs redzami šeit."
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format
+msgid "Read"
+msgstr ""
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Restore"
+msgstr "Resursa ID"
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Select"
+msgstr "Izvēlēties..."
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format
+msgid "Select the questions you want to read on stage."
+msgstr ""
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Selected"
+msgstr "Dzēst"
+
+#: lib/claper_web/live/event_live/moderate.html.heex
+#, elixir-autogen, elixir-format
+msgid "Undo"
+msgstr ""
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format
+msgid "Another moderator already changed this question."
+msgstr ""
+
+#: lib/claper_web/live/event_live/moderate.html.heex
+#, elixir-autogen, elixir-format
+msgid "Debate mode is off: discarding only hides a question here. The audience and the screen can still show it."
+msgstr ""
+
+#: lib/claper_web/live/event_live/moderate.ex
+#, elixir-autogen, elixir-format
+msgid "You no longer have access to this event"
 msgstr ""

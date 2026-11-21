@@ -199,6 +199,78 @@ defmodule Claper.Posts do
     end
   end
 
+  @moderation_statuses ~w(new selected read discarded)
+
+  @doc """
+  Moves a question through the moderator workflow: new, selected, read or
+  discarded. Discarding hides the question from moderation without deleting it.
+
+  The update is a single conditional statement that returns the fresh row, so it
+  never broadcasts stale data (pins, reaction counts) and, with `from: status`,
+  only applies when the question is still in the status the moderator saw.
+  Returns `{:error, :stale}` when another moderator changed it first or it no
+  longer exists. Changes go to the moderation topic only, never to attendees.
+  """
+  def set_moderation_status(post, status, opts \\ [])
+
+  def set_moderation_status(%Post{id: id, event_id: event_id}, status, opts)
+      when status in @moderation_statuses do
+    now = NaiveDateTime.utc_now()
+
+    query = from(p in Post, where: p.id == ^id and p.event_id == ^event_id, select: p)
+
+    query =
+      case Keyword.fetch(opts, :from) do
+        {:ok, from_status} -> where(query, [p], p.moderation_status == ^from_status)
+        :error -> query
+      end
+
+    case Repo.update_all(query,
+           set: [
+             moderation_status: status,
+             moderated_at: now,
+             updated_at: NaiveDateTime.truncate(now, :second)
+           ]
+         ) do
+      {1, [post]} ->
+        post = Repo.preload(post, :event)
+        broadcast_moderation(post)
+        {:ok, post}
+
+      {0, _} ->
+        {:error, :stale}
+    end
+  end
+
+  def set_moderation_status(%Post{}, _status, _opts), do: {:error, :invalid_status}
+
+  def subscribe_moderation(event_uuid) when is_binary(event_uuid) do
+    Phoenix.PubSub.subscribe(Claper.PubSub, "event:#{event_uuid}:moderation")
+  end
+
+  defp broadcast_moderation(post) do
+    Phoenix.PubSub.broadcast(
+      Claper.PubSub,
+      "event:#{post.event.uuid}:moderation",
+      {:post_moderated, post}
+    )
+  end
+
+  @doc "Questions of an event for the moderator screen, without replies."
+  def list_posts_for_moderation(event_uuid) do
+    from(p in Post,
+      join: e in assoc(p, :event),
+      where: e.uuid == ^event_uuid,
+      order_by: [asc: p.id]
+    )
+    |> Repo.all()
+  end
+
+  @doc "Reloads one question of the event for the moderator screen."
+  def get_moderation_post(event_id, uuid) do
+    Repo.get_by(Post, event_id: event_id, uuid: uuid)
+  end
+
   @doc """
   Updates a post.
 

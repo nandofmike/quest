@@ -99,6 +99,7 @@ defmodule ClaperWeb.Router do
 
       live("/e/:code/presenter", EventLive.Presenter, :show)
       live("/e/:code/manage", EventLive.Manage, :show)
+      live("/e/:code/moderar", EventLive.Moderate, :show)
       live("/e/:code/manage/add/poll", EventLive.Manage, :add_poll)
       live("/e/:code/manage/edit/poll/:id", EventLive.Manage, :edit_poll)
       live("/e/:code/manage/add/form", EventLive.Manage, :add_form)

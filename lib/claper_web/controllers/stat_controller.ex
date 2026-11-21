@@ -79,7 +79,8 @@ defmodule ClaperWeb.StatController do
           "Message",
           "Pinned",
           "Slide #",
-          "Sent at (UTC)"
+          "Sent at (UTC)",
+          "Moderation status"
         ]
 
         content = format_messages_for_export(event.posts)
@@ -273,7 +274,8 @@ defmodule ClaperWeb.StatController do
         post.body,
         post.pinned,
         post.position + 1,
-        post.inserted_at
+        post.inserted_at,
+        post.moderation_status
       ]
     end)
   end

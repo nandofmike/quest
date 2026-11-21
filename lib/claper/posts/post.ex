@@ -31,6 +31,9 @@ defmodule Claper.Posts.Post do
     field :attendee_identifier, :string
     field :position, :integer, default: 0
     field :pinned, :boolean, default: false
+    # Set only by the event team through Claper.Posts.set_moderation_status/2.
+    field :moderation_status, :string, default: "new"
+    field :moderated_at, :naive_datetime_usec
 
     belongs_to :event, Claper.Events.Event
     belongs_to :user, Claper.Accounts.User

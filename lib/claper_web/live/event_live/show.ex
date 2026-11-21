@@ -28,7 +28,7 @@ defmodule ClaperWeb.EventLive.Show do
 
   @post_reaction_types %{"👍" => :like, "❤️" => :love, "😂" => :lol}
 
-  @protected_post_fields ~w(user_id attendee_identifier event_id position pinned like_count love_count lol_count)
+  @protected_post_fields ~w(user_id attendee_identifier event_id position pinned like_count love_count lol_count moderation_status moderated_at)
 
   @impl true
   def mount(%{"code" => code}, session, socket) do

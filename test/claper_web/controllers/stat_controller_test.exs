@@ -75,7 +75,8 @@ defmodule ClaperWeb.StatControllerTest do
                "Message",
                "Pinned",
                "Slide #",
-               "Sent at (UTC)"
+               "Sent at (UTC)",
+               "Moderation status"
              ]
 
       assert row == [
@@ -85,7 +86,8 @@ defmodule ClaperWeb.StatControllerTest do
                "'=HYPERLINK(\"https://example.com\",\"click\")",
                to_string(message.pinned),
                "1",
-               to_string(message.inserted_at)
+               to_string(message.inserted_at),
+               "new"
              ]
     end
   end

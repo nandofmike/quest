@@ -1,0 +1,144 @@
+<div id="moderator" class="min-h-dvh bg-gray-50 text-gray-900">
+  <header class="sticky top-0 z-20 border-b border-gray-200 bg-white/95 backdrop-blur">
+    <div class="mx-auto flex max-w-5xl flex-wrap items-center gap-3 px-4 py-3">
+      <.link
+        navigate={~p"/e/#{@event.code}/manage"}
+        class="btn btn-circle btn-ghost btn-sm"
+        aria-label={gettext("Back to the event manager")}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5"
+          aria-hidden="true"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </.link>
+
+      <div class="min-w-0 flex-1">
+        <p class="truncate text-base font-bold leading-tight">{@event.name}</p>
+        <p class="text-xs text-gray-500">#{String.upcase(@event.code)}</p>
+      </div>
+
+      <button
+        id="toggle-questions"
+        type="button"
+        phx-click="set-questions"
+        phx-value-enabled={to_string(not @state.chat_enabled)}
+        data-confirm={
+          if @state.chat_enabled,
+            do: gettext("Close questions? The audience will no longer be able to send questions.")
+        }
+        class={[
+          "btn min-h-12 rounded-full px-5 text-sm font-bold text-white",
+          if(@state.chat_enabled,
+            do: "border-none bg-green-600 hover:bg-green-700",
+            else: "border-none bg-red-600 hover:bg-red-700"
+          )
+        ]}
+      >
+        {if @state.chat_enabled, do: gettext("Questions open"), else: gettext("Questions closed")}
+      </button>
+    </div>
+
+    <nav
+      class="mx-auto grid max-w-5xl grid-cols-2 gap-2 px-4 pb-3 sm:flex"
+      aria-label={gettext("Question lists")}
+    >
+      <button
+        :for={tab <- tabs()}
+        type="button"
+        phx-click="tab"
+        phx-value-tab={tab}
+        aria-pressed={to_string(@tab == tab)}
+        class={[
+          "min-h-11 rounded-full px-4 text-sm font-semibold transition-colors sm:shrink-0",
+          if(@tab == tab,
+            do: "bg-primary-500 text-white",
+            else: "bg-gray-100 text-gray-700 hover:bg-gray-200"
+          )
+        ]}
+      >
+        {tab_label(tab)} ({Map.get(@counts, tab, 0)})
+      </button>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-5xl px-4 pt-4 pb-28">
+    <p
+      :if={!@state.debate_mode}
+      id="debate-off-warning"
+      class="mb-4 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900"
+    >
+      {gettext(
+        "Debate mode is off: discarding only hides a question here. The audience and the screen can still show it."
+      )}
+    </p>
+
+    <div
+      :if={@last_action}
+      id="undo-bar"
+      role="status"
+      class="fixed inset-x-4 bottom-[max(1rem,env(safe-area-inset-bottom))] z-30 mx-auto flex max-w-xl items-center justify-between gap-3 rounded-2xl bg-secondary-500 px-4 py-3 text-sm text-white shadow-lg"
+    >
+      <span>{undo_label(@last_action.status)}</span>
+      <button
+        type="button"
+        phx-click="undo"
+        class="min-h-10 rounded-full bg-white px-4 font-bold text-secondary-500"
+      >
+        {gettext("Undo")}
+      </button>
+    </div>
+
+    <p :if={@visible_posts == []} class="py-16 text-center text-base text-gray-500">
+      {empty_label(@tab)}
+    </p>
+
+    <ul class="space-y-3">
+      <li
+        :for={post <- @visible_posts}
+        id={"question-#{post.uuid}"}
+        class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm"
+      >
+        <div class="mb-2 flex items-center justify-between gap-2 text-xs text-gray-500">
+          <span class="truncate font-semibold">{post.name || gettext("Anonymous")}</span>
+          <span
+            id={"question-time-#{post.uuid}"}
+            phx-hook="LocalDate"
+            data-utc={post.inserted_at}
+            data-format="HH:mm"
+          >
+          </span>
+        </div>
+
+        <p class="whitespace-pre-line break-words text-lg leading-snug md:text-xl">
+          {post.body}
+        </p>
+
+        <div class="mt-4 flex gap-2">
+          <%= for {status, label, style} <- actions_for(post.moderation_status) do %>
+            <button
+              type="button"
+              phx-click="set-status"
+              phx-value-id={post.uuid}
+              phx-value-status={status}
+              class={[
+                "min-h-12 flex-1 rounded-xl px-2 text-sm font-bold transition-colors",
+                style
+              ]}
+            >
+              {label}
+            </button>
+          <% end %>
+        </div>
+      </li>
+    </ul>
+  </main>
+</div>
